@@ -2,6 +2,8 @@ body{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    height: 100%;
+    
 }
 
 header{
@@ -22,6 +24,9 @@ header{
     width: 50%;
 }
 
+.contenedor{
+    min-height: 100%;
+}
 
 #navegacion-movil>ul,#navegacion-movil>ul>li, .lista-navegacion>li{
     display: flex;
@@ -79,6 +84,8 @@ footer{
     padding-right: 2rem;
     background-color: #2b2b2b;
     color: #ffffff;
+    position: relative;
+    clear: both;
 }
 
 main>.contenedor{
@@ -121,7 +128,7 @@ main>.contenedor{
 
 
 
-.discos>a{
+.disco-botones>a{
     text-decoration: none;
     color:#2b2b2b;
     
@@ -266,6 +273,7 @@ button{
         padding: 1rem;
     }
 
+    
     #btnCancelar{
         display: inline-block;
         width: 20%;

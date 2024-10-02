@@ -1,6 +1,6 @@
 <?php
-    require_once('model/UsuariosModel.php');
-    require_once('view/UsuariosView.php');
+    require_once('app/model/UsuariosModel.php');
+    require_once('app/view/UsuariosView.php');
     class UsuariosController{
         private $modelo;
         private $vista;

@@ -7,16 +7,19 @@
     </div>
     <div class="discos">
         {foreach from=$discos item=$disco}
-        <a href="disco/{$disco->id}">
-            <div class="disco">
-                <img src="{$disco->imagen}" alt="">
-                <h3>{$disco->nombre} - {$disco->anio}</h3>
+        <div class="disco-botones">
+            <a href="disco/{$disco->id}">
+                <div class="disco">
+                    <img src="{$disco->imagen}" alt="">
+                    <h3>{$disco->nombre} - {$disco->anio}</h3>
+                </div>
+            </a>
+            <div class="btnAcciones">
+                <a class="btn btn-primary" href="editar-disco/{$disco->id}">✏</a>
+                <a class="btn btn-primary" href="eliminar-disco/{$disco->id}">🗑</a>
             </div>
-        </a>
-        <div class="btnAcciones">
-            <a class="btn btn-primary" href="editar-disco/{$disco->id}">✏</a>
-            <a class="btn btn-primary" href="eliminar-disco/{$disco->id}">🗑</a>
         </div>
+        
         {/foreach}
     </div>
     

@@ -1,6 +1,7 @@
 <?php
-require_once("view/DiscosView.php");
-require_once("model/DiscosModel.php");
+require_once("app/view/DiscosView.php");
+require_once("app/model/DiscosModel.php");
+require_once("app/controller/UsuariosController.php");
 
     class DiscosController{
         private $vista;
@@ -22,7 +23,16 @@ require_once("model/DiscosModel.php");
         }
         
         public function crearDisco(){
-            $this->vista->crearDisco();
+            $usuariosController = new UsuariosController();
+            if(!$usuariosController->chequearLogueado()){
+                $usuariosController->verificarUsuarios();
+            }else if($usuariosController->chequearRol()){
+                $this->vista->crearDisco();
+            }else{
+                print("No tienes los permisos suficientes");
+                $this->mostrarDiscos();
+            }
+            
         }
     
         public function guardarDisco(){
@@ -51,8 +61,16 @@ require_once("model/DiscosModel.php");
         }
 
         public function editarDisco($id){
-            $disco = $this->modelo->getDisco($id);
-            $this->vista->editarDisco($disco);
+            $usuariosController = new UsuariosController();
+            if(!$usuariosController->chequearLogueado()){
+                $usuariosController->verificarUsuarios();
+            }else if($usuariosController->chequearRol()){
+                $disco = $this->modelo->getDisco($id);
+                $this->vista->editarDisco($disco);
+            }else{
+                print("No tienes los permisos suficientes");
+                $this->mostrarDiscos();
+            }
         }
         public function actualizarDisco(){
             if(!empty($_POST['nombre']) && !empty($_POST['anio']) && !empty($imagen = $_POST['imagen'])){
@@ -72,7 +90,18 @@ require_once("model/DiscosModel.php");
         }
 
         public function eliminarDisco($id){
-            $this->modelo->eliminarDisco($id);
+            $usuariosController = new UsuariosController();
+
+            if(!$usuariosController->chequearLogueado()){
+                $usuariosController->verificarUsuarios();
+            }else if($usuariosController->chequearRol()){
+                $this->modelo->eliminarDisco($id);
+            }else{
+                print("No tienes los permisos suficientes");
+                $this->mostrarDiscos();
+            }
+
+            
         }
             
     }

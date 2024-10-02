@@ -1,7 +1,8 @@
 <?php 
-require_once("view/CancionesView.php");
-require_once("model/CancionesModel.php");
-require_once("model/DiscosModel.php");
+require_once("app/view/CancionesView.php");
+require_once("app/model/CancionesModel.php");
+require_once("app/model/DiscosModel.php");
+require_once("app/controller/UsuariosController.php");
 class CancionesController{
     private $vista;
     private $modelo;
@@ -10,7 +11,9 @@ class CancionesController{
         $this->vista = new CancionesView();
         $this->modelo = new CancionesModel();
     }
-
+    function chequeo(){
+        
+    }
     public function index(){
         $canciones = $this->modelo->getCanciones();
         $this->vista->mostrarCanciones($canciones);
@@ -22,8 +25,16 @@ class CancionesController{
     }
 
     public function crearCancion(){
-        $opciones = $this->modelo->getOpciones();
-        $this->vista->crearCancion($opciones);
+        $usuariosController = new UsuariosController();
+        if(!$usuariosController->chequearLogueado()){
+            $usuariosController->verificarUsuarios();
+        }else if($usuariosController->chequearRol()){
+            $opciones = $this->modelo->getOpciones();
+            $this->vista->crearCancion($opciones);
+        }else{
+            print("No tienes los permisos suficientes");
+            $this->index();
+        }
     }
 
     public function guardarCancion(){
@@ -42,9 +53,19 @@ class CancionesController{
 
     }
     public function editarCancion($id){
-        $cancion = $this->modelo->getCancion($id);
-        $opciones = $this->modelo->getOpciones();
-        $this->vista->editarCancion($cancion, $opciones);
+        $usuariosController = new UsuariosController();
+
+        if(!$usuariosController->chequearLogueado()){
+            $usuariosController->verificarUsuarios();
+        }else if($usuariosController->chequearRol()){
+            $cancion = $this->modelo->getCancion($id);
+            $opciones = $this->modelo->getOpciones();
+            $this->vista->editarCancion($cancion, $opciones);
+        }else{
+            print("No tienes los permisos suficientes");
+            $this->index();
+        }
+        
     }
     public function actualizarCancion(){
         if(!empty($_POST['nombre']) && !empty($_POST['disco']) && !empty($_POST['duracion']) && !empty($_POST['link'])){
@@ -66,7 +87,15 @@ class CancionesController{
     }
 
     public function eliminarCancion($id){
-        $this->modelo->eliminarCancion($id);
+        $usuariosController = new UsuariosController();
+        if(!$usuariosController->chequearLogueado()){
+            $usuariosController->verificarUsuarios();
+        }else if($usuariosController->chequearRol()){
+            $this->modelo->eliminarCancion($id);
+        }else{
+            print("No tienes los permisos suficientes");
+            $this->index();
+        }
     }
 }
 ?>
