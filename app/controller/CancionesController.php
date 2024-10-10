@@ -15,13 +15,29 @@ class CancionesController{
         
     }
     public function index(){
+        $usuariosController = new UsuariosController();
         $canciones = $this->modelo->getCanciones();
-        $this->vista->mostrarCanciones($canciones);
+        $esAdmin = false;
+        $estaLogueado = false;
+        if($usuariosController->chequearLogueado()){
+            $esAdmin = $usuariosController->chequearRol();
+            $estaLogueado=true;
+        }
+
+        
+        $this->vista->mostrarCanciones($canciones, $esAdmin, $estaLogueado);
     }
 
     public function verCancion($id){
+        $usuariosController = new UsuariosController();
         $cancion = $this->modelo->getCancion($id);
-        $this->vista->mostrarCancion($cancion);
+        $esAdmin = false;
+        $estaLogueado = false;
+        if($usuariosController->chequearLogueado()){
+            $esAdmin = $usuariosController->chequearRol();
+            $estaLogueado=true;
+        }
+        $this->vista->mostrarCancion($cancion,$esAdmin, $estaLogueado);
     }
 
     public function crearCancion(){
@@ -38,18 +54,21 @@ class CancionesController{
     }
 
     public function guardarCancion(){
-        $nombre = $_POST['nombre'];
-        $disco = $_POST['disco'];
-        $duracion = $_POST['duracion'];
-        $link = $_POST['link'];
-
-        $cancion = new stdClass();
-        $cancion->nombre=$nombre;
-        $cancion->disco=$disco;
-        $cancion->duracion=$duracion;
-        $cancion->link=$link;
-
-        $this->modelo->insertarCancion($cancion);
+        if(!empty($_POST['nombre']) && !empty($_POST['disco']) && !empty($_POST['duracion']) && !empty($_POST['link'])){
+            $nombre = $_POST['nombre'];
+            $disco = $_POST['disco'];
+            $duracion = $_POST['duracion'];
+            $link = $_POST['link'];
+    
+            $cancion = new stdClass();
+            $cancion->nombre=$nombre;
+            $cancion->disco=$disco;
+            $cancion->duracion=$duracion;
+            $cancion->link=$link;
+    
+            $this->modelo->insertarCancion($cancion);
+        }
+        
 
     }
     public function editarCancion($id){

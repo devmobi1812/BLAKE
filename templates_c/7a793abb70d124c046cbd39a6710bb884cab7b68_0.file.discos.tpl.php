@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-09-28 03:19:06
+/* Smarty version 4.5.1, created on 2024-10-03 22:37:42
   from 'C:\xampp\htdocs\BLAKE\templates\discos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_66f7598ade65d3_46086845',
+  'unifunc' => 'content_66ff009676b7d2_32703350',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7a793abb70d124c046cbd39a6710bb884cab7b68' => 
     array (
       0 => 'C:\\xampp\\htdocs\\BLAKE\\templates\\discos.tpl',
-      1 => 1727486321,
+      1 => 1727987860,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_66f7598ade65d3_46086845 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ff009676b7d2_32703350 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>  
 <?php $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -31,7 +31,12 @@ $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smar
 <div class="contenedor">
     <div class="encabezado">
         <h1>Discos</h1>
+        <?php ob_start();
+echo $_smarty_tpl->tpl_vars['esAdmin']->value;
+$_prefixVariable1 = ob_get_clean();
+if ($_prefixVariable1) {?>
         <a class="btn btn-primary" href="/blake/crear-disco">Crear Disco</a>
+        <?php }?>
     </div>
     <div class="discos">
         <?php
@@ -51,12 +56,17 @@ $_smarty_tpl->tpl_vars['disco']->do_else = false;
 </h3>
                 </div>
             </a>
+            <?php ob_start();
+echo $_smarty_tpl->tpl_vars['esAdmin']->value;
+$_prefixVariable2 = ob_get_clean();
+if ($_prefixVariable2) {?>
             <div class="btnAcciones">
                 <a class="btn btn-primary" href="editar-disco/<?php echo $_smarty_tpl->tpl_vars['disco']->value->id;?>
 ">✏</a>
                 <a class="btn btn-primary" href="eliminar-disco/<?php echo $_smarty_tpl->tpl_vars['disco']->value->id;?>
 ">🗑</a>
             </div>
+            <?php }?>
         </div>
         
         <?php

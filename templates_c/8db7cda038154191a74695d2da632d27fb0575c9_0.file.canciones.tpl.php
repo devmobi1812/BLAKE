@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-09-27 02:56:21
+/* Smarty version 4.5.1, created on 2024-10-03 22:33:46
   from 'C:\xampp\htdocs\BLAKE\templates\canciones.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_66f602b5ee86b6_35608049',
+  'unifunc' => 'content_66feffaacd91a8_48099955',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8db7cda038154191a74695d2da632d27fb0575c9' => 
     array (
       0 => 'C:\\xampp\\htdocs\\BLAKE\\templates\\canciones.tpl',
-      1 => 1727397713,
+      1 => 1727987624,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_66f602b5ee86b6_35608049 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66feffaacd91a8_48099955 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>  
 <?php $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -32,7 +32,12 @@ $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smar
     <div class="contenedor">
       <div class="encabezado">
         <h1>Canciones</h1>
+        <?php ob_start();
+echo $_smarty_tpl->tpl_vars['esAdmin']->value;
+$_prefixVariable1 = ob_get_clean();
+if ($_prefixVariable1) {?>
         <a class="btn btn-primary" href="/blake/crear-cancion">Crear Canción</a>
+        <?php }?>
       </div>
           <table class="table-dark">
               <thead>
@@ -64,11 +69,16 @@ $_smarty_tpl->tpl_vars['cancion']->do_else = false;
                     <td>
                       <a class="btn btn-primary" href="cancion/<?php echo $_smarty_tpl->tpl_vars['cancion']->value->id;?>
 ">👁</a>
-                      <a class="btn btn-primary" href="editar-cancion/<?php echo $_smarty_tpl->tpl_vars['cancion']->value->id;?>
+                      <?php ob_start();
+echo $_smarty_tpl->tpl_vars['esAdmin']->value;
+$_prefixVariable2 = ob_get_clean();
+if ($_prefixVariable2) {?>
+                        <a class="btn btn-primary" href="editar-cancion/<?php echo $_smarty_tpl->tpl_vars['cancion']->value->id;?>
 ">✏</a>
-                      <a class="btn btn-primary" href="eliminar-cancion/<?php echo $_smarty_tpl->tpl_vars['cancion']->value->id;?>
+                        <a class="btn btn-primary" href="eliminar-cancion/<?php echo $_smarty_tpl->tpl_vars['cancion']->value->id;?>
 ">🗑</a>
-
+                      <?php }?>
+                      
                     </td>
                   </tr>
                 <?php

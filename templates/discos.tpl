@@ -3,7 +3,9 @@
 <div class="contenedor">
     <div class="encabezado">
         <h1>Discos</h1>
+        {if {$esAdmin}}
         <a class="btn btn-primary" href="/blake/crear-disco">Crear Disco</a>
+        {/if}
     </div>
     <div class="discos">
         {foreach from=$discos item=$disco}
@@ -14,10 +16,12 @@
                     <h3>{$disco->nombre} - {$disco->anio}</h3>
                 </div>
             </a>
+            {if {$esAdmin}}
             <div class="btnAcciones">
                 <a class="btn btn-primary" href="editar-disco/{$disco->id}">✏</a>
                 <a class="btn btn-primary" href="eliminar-disco/{$disco->id}">🗑</a>
             </div>
+            {/if}
         </div>
         
         {/foreach}

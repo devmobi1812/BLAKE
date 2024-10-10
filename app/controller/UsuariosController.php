@@ -78,7 +78,7 @@
                     session_start();
                     $_SESSION["logueado"] = true;
                     $_SESSION["usuario"] = $nombre;
-                    print("USUARIO LOGEADO: ".$nombre);
+                    //print("USUARIO LOGEADO: ".$nombre);
 
                 }
             }
@@ -95,10 +95,12 @@
         }
 
         function chequearLogueado() {
-            session_start();
+            if (session_status() == PHP_SESSION_NONE) {
+                session_start();
+            }
             //  Si usuario no esta definido, retorna falso pq no hay nadie con login
             if (!isset($_SESSION['usuario'])) {
-                print("No hay nadie login");
+                //print("No hay nadie login");
                 return false;
             }else{
                 //  Si usuario  esta definido, retorna true pq hay alguien con login

@@ -8,21 +8,21 @@
             $this->smarty = new Smarty();
         }
 
-        function mostrarDiscos($discos){
+        function mostrarDiscos($discos, $esAdmin, $estaLogueado){
             $titulo = "Discos";
-            $usuario = "Iniciar sesión";
+            $this->smarty->assign('esAdmin', $esAdmin);
+            $this->smarty->assign('estaLogueado', $estaLogueado);
             $this->smarty->assign('titulo', $titulo);
             $this->smarty->assign('discos', $discos);
-            $this->smarty->assign('usuario', $usuario);
             $this->smarty->display('templates/discos.tpl');
         }
 
-        function mostrarDisco($disco){
+        function mostrarDisco($disco, $esAdmin, $estaLogueado){
             $titulo = "Disco";
-            $usuario = "Iniciar sesión";
+            $this->smarty->assign('esAdmin', $esAdmin);
+            $this->smarty->assign('estaLogueado', $estaLogueado);
             $this->smarty->assign('titulo', $titulo);
             $this->smarty->assign('discos', $disco);
-            $this->smarty->assign('usuario', $usuario);
             $this->smarty->display('templates/disco.tpl');
         }
 

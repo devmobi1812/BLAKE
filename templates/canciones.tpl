@@ -4,7 +4,9 @@
     <div class="contenedor">
       <div class="encabezado">
         <h1>Canciones</h1>
+        {if {$esAdmin}}
         <a class="btn btn-primary" href="/blake/crear-cancion">Crear Canción</a>
+        {/if}
       </div>
           <table class="table-dark">
               <thead>
@@ -26,9 +28,11 @@
                     <td>{$cancion->disco_nombre}</td>
                     <td>
                       <a class="btn btn-primary" href="cancion/{$cancion->id}">👁</a>
-                      <a class="btn btn-primary" href="editar-cancion/{$cancion->id}">✏</a>
-                      <a class="btn btn-primary" href="eliminar-cancion/{$cancion->id}">🗑</a>
-
+                      {if {$esAdmin}}
+                        <a class="btn btn-primary" href="editar-cancion/{$cancion->id}">✏</a>
+                        <a class="btn btn-primary" href="eliminar-cancion/{$cancion->id}">🗑</a>
+                      {/if}
+                      
                     </td>
                   </tr>
                 {/foreach}

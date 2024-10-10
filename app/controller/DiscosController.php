@@ -13,13 +13,29 @@ require_once("app/controller/UsuariosController.php");
         }
 
         function mostrarDiscos(){
+            $usuariosController = new UsuariosController();
             $discos = $this->modelo->getDiscos();
-            $this->vista->mostrarDiscos($discos);
+            $esAdmin = false;
+            $estaLogueado = false;
+            if($usuariosController->chequearLogueado()){
+                $esAdmin = $usuariosController->chequearRol();
+                $estaLogueado=true;
+            }
+            $this->vista->mostrarDiscos($discos,$esAdmin, $estaLogueado);
         }
 
         public function verDisco($id){
+            $usuariosController = new UsuariosController();
             $disco = $this->modelo->getCancionesDisco($id);
-            $this->vista->mostrarDisco($disco);
+
+            $esAdmin = false;
+            $estaLogueado = false;
+            if($usuariosController->chequearLogueado()){
+                $esAdmin = $usuariosController->chequearRol();
+                $estaLogueado=true;
+            }
+
+            $this->vista->mostrarDisco($disco,$esAdmin, $estaLogueado);
         }
         
         public function crearDisco(){
