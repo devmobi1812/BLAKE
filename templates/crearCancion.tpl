@@ -3,7 +3,7 @@
 
     <div class="contenedor">
         <h1>Crear Canción</h1>
-        <form action="/blake/guardar-cancion" method="post">
+        <form action="guardar-cancion" method="post">
             <label for="">Nombre</label>
             <input type="text" name="nombre">
             
@@ -21,7 +21,7 @@
             <input type="text" name="link" >
             
             
-            <a id="btnCancelar" class="btn btn-primary" href="/blake/canciones">Cancelar</a>
+            <a id="btnCancelar" class="btn btn-primary" href="canciones">Cancelar</a>
             <button class="btn btn-primary" type="submit">Crear</button>
         </form>
     </div>

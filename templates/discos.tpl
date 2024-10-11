@@ -4,7 +4,7 @@
     <div class="encabezado">
         <h1>Discos</h1>
         {if {$esAdmin}}
-        <a class="btn btn-primary" href="/blake/crear-disco">Crear Disco</a>
+        <a class="btn btn-primary" href="crear-disco">Crear Disco</a>
         {/if}
     </div>
     <div class="discos">

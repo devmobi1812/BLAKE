@@ -23,7 +23,7 @@
                     <td>{$disk->artista_nombre}</td>
                     <td>{$disk->duracion}</td>
                     <td>
-                        <a class="btn btn-primary" href="/blake/cancion/{$disk->id}"> Ver 👁</a>
+                        <a class="btn btn-primary" href="cancion/{$disk->id}">👁</a>
                     </td>
                     </tr>
                 {/foreach}

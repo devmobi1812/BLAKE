@@ -3,10 +3,10 @@
     <main>
         <div id="login">
             <div class="login">
-                <a href="/blake/inicio"><img src="/blake/resources/img/header/logo-blake-2024-70x.png" alt=""></a>
+                <a href="inicio"><img src="/blake/resources/img/header/logo-blake-2024-70x.png" alt=""></a>
                 <div class="contenedorFormulario">
                     <h1>Registrar</h2>
-                        <form method="POST" action="/blake/registrado">
+                        <form method="POST" action="registrado">
                             <label for="">Nombre de usuario</label>
                             <input type="text" name="nombre">
                             <label for="">Contraseña</label>

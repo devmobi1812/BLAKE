@@ -67,6 +67,7 @@ class CancionesController{
             $cancion->link=$link;
     
             $this->modelo->insertarCancion($cancion);
+            header('Location: '.BASE_URL);
         }
         
 
@@ -102,6 +103,7 @@ class CancionesController{
             $cancion->link=$link;
 
             $this->modelo->actualizarCancion($cancion);
+            header('Location: '.BASE_URL."canciones");
         }
     }
 
@@ -111,6 +113,7 @@ class CancionesController{
             $usuariosController->verificarUsuarios();
         }else if($usuariosController->chequearRol()){
             $this->modelo->eliminarCancion($id);
+            header('Location: '.BASE_URL);
         }else{
             print("No tienes los permisos suficientes");
             $this->index();

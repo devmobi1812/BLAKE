@@ -3,7 +3,7 @@
 
 <div class="contenedor">
     <h1>Crear Disco</h1>
-    <form action="/blake/guardar-disco" method="post">
+    <form action="guardar-disco" method="post">
         <label for="">Nombre</label>
         <input type="text" name="nombre">
 
@@ -13,7 +13,7 @@
         <label for="">Imagen</label>
         <input type="text" name="imagen" >
         
-        <a id="btnCancelar" class="btn btn-primary" href="/blake/discos">Cancelar</a>
+        <a id="btnCancelar" class="btn btn-primary" href="discos">Cancelar</a>
         <button class="btn btn-primary" type="submit">Crear</button>
     </form>
 </div>

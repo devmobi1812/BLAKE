@@ -2,7 +2,7 @@
 {include file='header.tpl'} 
     <div class="contenedor">
         <h1>Editar Canción</h1>
-        <form action="/blake/actualizar-cancion" method="post">
+        <form action="actualizar-cancion" method="post">
             <input type="hidden" name="id" value="{$cancion.id}">
             <label for="">Nombre</label>
             <input type="text" name="nombre" value="{$cancion.nombre}">
@@ -24,8 +24,8 @@
             <input type="text" name="link" value="{$cancion.link}">
             
             
-            <a id="btnCancelar" class="btn btn-primary" href="/blake/canciones">Cancelar</a>
-            <button class="btn btn-primary" type="submit">Crear</button>
+            <a id="btnCancelar" class="btn btn-primary" href="canciones">Cancelar</a>
+            <button class="btn btn-primary" type="submit">Guardar</button>
         </form>
     </div>
 {include file='footer.tpl'}

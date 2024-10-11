@@ -59,6 +59,8 @@
 
                     $this->modelo->crearUsuario($usuario);
 
+                    $this->validar();
+
                 }else{
                     return print("Error, las contraseñas no son iguales");
                 }
@@ -79,7 +81,7 @@
                     $_SESSION["logueado"] = true;
                     $_SESSION["usuario"] = $nombre;
                     //print("USUARIO LOGEADO: ".$nombre);
-
+                    header('Location: '.BASE_URL."canciones");
                 }
             }
         }

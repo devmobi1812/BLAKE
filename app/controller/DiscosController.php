@@ -69,6 +69,7 @@ require_once("app/controller/UsuariosController.php");
                 $disco->imagen=$imagen;
         
                 $this->modelo->insertarDisco($disco);
+                header('Location: '.BASE_URL."discos");
             }else{
                 // DEBO MOSTRAR EL ERROR DE QUE HAY UN CAMPO VACIO
             }
@@ -102,6 +103,7 @@ require_once("app/controller/UsuariosController.php");
                 $disco->imagen=$imagen;
 
                 $this->modelo->actualizarDisco($disco);
+                header('Location: '.BASE_URL."discos");
             }
         }
 

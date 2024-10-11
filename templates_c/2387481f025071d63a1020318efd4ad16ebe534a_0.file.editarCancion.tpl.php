@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-09-27 02:59:11
+/* Smarty version 4.5.1, created on 2024-10-11 16:42:48
   from 'C:\xampp\htdocs\BLAKE\templates\editarCancion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_66f6035feca9e7_85728588',
+  'unifunc' => 'content_67093968092623_62056389',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2387481f025071d63a1020318efd4ad16ebe534a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\BLAKE\\templates\\editarCancion.tpl',
-      1 => 1727398748,
+      1 => 1728657602,
       2 => 'file',
     ),
   ),
@@ -23,14 +23,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_66f6035feca9e7_85728588 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67093968092623_62056389 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>  
 <?php $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?> 
     <div class="contenedor">
         <h1>Editar Canción</h1>
-        <form action="/blake/actualizar-cancion" method="post">
+        <form action="actualizar-cancion" method="post">
             <input type="hidden" name="id" value="<?php echo $_smarty_tpl->tpl_vars['cancion']->value['id'];?>
 ">
             <label for="">Nombre</label>
@@ -66,8 +66,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 ">
             
             
-            <a id="btnCancelar" class="btn btn-primary" href="/blake/canciones">Cancelar</a>
-            <button class="btn btn-primary" type="submit">Crear</button>
+            <a id="btnCancelar" class="btn btn-primary" href="canciones">Cancelar</a>
+            <button class="btn btn-primary" type="submit">Guardar</button>
         </form>
     </div>
 <?php $_smarty_tpl->_subTemplateRender('file:footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
