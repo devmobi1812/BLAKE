@@ -4,20 +4,20 @@
     <div class="contenedor">
         <h1>Crear Canción</h1>
         <form action="guardar-cancion" method="post">
-            <label for="">Nombre</label>
+            <label for="">Nombre *</label>
             <input type="text" name="nombre">
             
-            <label for="">Disco</label>
+            <label for="">Disco *</label>
             <select name="disco" id="">
                 {foreach from=$opciones item=$opcion}
                 <option value="{$opcion->id}">{$opcion->nombre}</option>  
                 {/foreach}
             </select>
 
-            <label for="">Duración</label>
+            <label for="">Duración *</label>
             <input type="text" name="duracion">
 
-            <label for="">Link</label>
+            <label for="">Link *</label>
             <input type="text" name="link" >
             
             

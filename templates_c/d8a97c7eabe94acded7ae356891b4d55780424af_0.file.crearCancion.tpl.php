@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-10-11 16:42:52
+/* Smarty version 4.5.1, created on 2024-10-11 19:52:10
   from 'C:\xampp\htdocs\BLAKE\templates\crearCancion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_6709396c5031e2_35894510',
+  'unifunc' => 'content_670965ca4357d5_53450272',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd8a97c7eabe94acded7ae356891b4d55780424af' => 
     array (
       0 => 'C:\\xampp\\htdocs\\BLAKE\\templates\\crearCancion.tpl',
-      1 => 1728657650,
+      1 => 1728668985,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6709396c5031e2_35894510 (Smarty_Internal_Template $_smarty_tpl) {
+function content_670965ca4357d5_53450272 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>  
 <?php $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -32,10 +32,10 @@ $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smar
     <div class="contenedor">
         <h1>Crear Canción</h1>
         <form action="guardar-cancion" method="post">
-            <label for="">Nombre</label>
+            <label for="">Nombre *</label>
             <input type="text" name="nombre">
             
-            <label for="">Disco</label>
+            <label for="">Disco *</label>
             <select name="disco" id="">
                 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['opciones']->value, 'opcion');
@@ -51,10 +51,10 @@ $_smarty_tpl->tpl_vars['opcion']->do_else = false;
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </select>
 
-            <label for="">Duración</label>
+            <label for="">Duración *</label>
             <input type="text" name="duracion">
 
-            <label for="">Link</label>
+            <label for="">Link *</label>
             <input type="text" name="link" >
             
             

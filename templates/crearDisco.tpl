@@ -4,10 +4,10 @@
 <div class="contenedor">
     <h1>Crear Disco</h1>
     <form action="guardar-disco" method="post">
-        <label for="">Nombre</label>
+        <label for="">Nombre *</label>
         <input type="text" name="nombre">
 
-        <label for="">Año</label>
+        <label for="">Año *</label>
         <input type="number" name="anio">
 
         <label for="">Imagen</label>

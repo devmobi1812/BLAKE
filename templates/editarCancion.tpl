@@ -4,23 +4,23 @@
         <h1>Editar Canción</h1>
         <form action="actualizar-cancion" method="post">
             <input type="hidden" name="id" value="{$cancion.id}">
-            <label for="">Nombre</label>
+            <label for="">Nombre *</label>
             <input type="text" name="nombre" value="{$cancion.nombre}">
             
             <label for="">Disco Actual</label>
             <input type="text" value="{$cancion.disco_nombre}" disabled>
 
-            <label for="">Elegir disco nuevo</label>
+            <label for="">Elegir disco nuevo *</label>
             <select name="disco" id="">
                 {foreach from=$opciones item=$opcion}
                 <option value="{$opcion->id}">{$opcion->nombre}</option>  
                 {/foreach}
             </select>
 
-            <label for="">Duración</label>
+            <label for="">Duración *</label>
             <input type="text" name="duracion" value="{$cancion.duracion}">
 
-            <label for="">Link</label>
+            <label for="">Link *</label>
             <input type="text" name="link" value="{$cancion.link}">
             
             

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-09-26 23:15:11
+/* Smarty version 4.5.1, created on 2024-10-11 19:47:37
   from 'C:\xampp\htdocs\BLAKE\templates\cancion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_66f5cedf21a9d2_44900710',
+  'unifunc' => 'content_670964b90be2b6_98280518',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6cc7d1c8a48a1606479840737ce0b95ac100037e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\BLAKE\\templates\\cancion.tpl',
-      1 => 1727384640,
+      1 => 1728668851,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_66f5cedf21a9d2_44900710 (Smarty_Internal_Template $_smarty_tpl) {
+function content_670964b90be2b6_98280518 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>  
 <?php $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -40,7 +40,12 @@ $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smar
                     <th scope="col">Album</th>
                     <th scope="col">Año</th>
                     <th scope="col">Duracion</th>
-                    
+                    <?php ob_start();
+echo $_smarty_tpl->tpl_vars['esAdmin']->value;
+$_prefixVariable1 = ob_get_clean();
+if ($_prefixVariable1) {?>
+                        <th scope="col">Acciones</th>
+                    <?php }?>
                 </tr>
                 </thead>
                 <tbody>
@@ -48,9 +53,9 @@ $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smar
                         <td>
                             <a class="btn btn-primary" href="<?php ob_start();
 echo $_smarty_tpl->tpl_vars['cancion']->value['link'];
-$_prefixVariable1 = ob_get_clean();
-echo $_prefixVariable1;?>
-"> ▶</a>
+$_prefixVariable2 = ob_get_clean();
+echo $_prefixVariable2;?>
+"><i class="fa-solid fa-play"></i></a> <!--BOTON DE REPRODUCIR-->
                         </td>
                     <td><?php echo $_smarty_tpl->tpl_vars['cancion']->value['nombre'];?>
 </td>
@@ -62,7 +67,17 @@ echo $_prefixVariable1;?>
 </td>
                     <td><?php echo $_smarty_tpl->tpl_vars['cancion']->value['duracion'];?>
 </td>
-                    
+                    <td>
+                        <?php ob_start();
+echo $_smarty_tpl->tpl_vars['esAdmin']->value;
+$_prefixVariable3 = ob_get_clean();
+if ($_prefixVariable3) {?>
+                            <a class="btn btn-primary" href="editar-cancion/<?php echo $_smarty_tpl->tpl_vars['cancion']->value['id'];?>
+"><i class="fa-solid fa-pen-to-square"></i></a> <!--BOTON DE EDITAR-->
+                            <a class="btn btn-primary eliminar-cancion" href="eliminar-cancion/<?php echo $_smarty_tpl->tpl_vars['cancion']->value['id'];?>
+"><i class="fa-solid fa-trash"></i></a><!--BOTON DE ELIMINAR-->
+                        <?php }?>
+                    </td>
                     </tr>
                 </tbody>
             </table>

@@ -27,10 +27,10 @@
                     <td>{$cancion->artista_nombre}</td>
                     <td>{$cancion->disco_nombre}</td>
                     <td>
-                      <a class="btn btn-primary" href="cancion/{$cancion->id}">👁</a>
+                      <a class="btn btn-primary" href="cancion/{$cancion->id}"><i class="fa-solid fa-eye"></i></a> <!--BOTON DE VER-->
                       {if {$esAdmin}}
-                        <a class="btn btn-primary" href="editar-cancion/{$cancion->id}">✏</a>
-                        <a class="btn btn-primary eliminar-cancion" href="eliminar-cancion/{$cancion->id}">🗑</a>
+                        <a class="btn btn-primary" href="editar-cancion/{$cancion->id}"><i class="fa-solid fa-pen-to-square"></i></a> <!--BOTON DE EDITAR-->
+                        <a class="btn btn-primary eliminar-cancion" href="eliminar-cancion/{$cancion->id}"><i class="fa-solid fa-trash"></i></a><!--BOTON DE ELIMINAR-->
                       {/if}
                       
                     </td>

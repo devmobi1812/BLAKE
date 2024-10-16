@@ -57,7 +57,8 @@ require_once("app/controller/UsuariosController.php");
                 $anio = $_POST['anio'];
                 $imagen="";
                 if(empty($_POST['imagen'])){
-                    $imagen="https://i.scdn.co/image/ab67616d0000b273e73a74043b1b7f721627b8f4";
+                    //$imagen="https://i.scdn.co/image/ab67616d0000b273e73a74043b1b7f721627b8f4";
+                    $imagen="/blake/resources/img/discogenerico.png";
                 }else{
                     $imagen = $_POST['imagen'];
                 }
@@ -90,11 +91,17 @@ require_once("app/controller/UsuariosController.php");
             }
         }
         public function actualizarDisco(){
-            if(!empty($_POST['nombre']) && !empty($_POST['anio']) && !empty($imagen = $_POST['imagen'])){
+            if(!empty($_POST['nombre']) && !empty($_POST['anio'])){
                 $id=$_POST['id'];
                 $nombre = $_POST['nombre'];
                 $anio = $_POST['anio'];
-                $imagen = $_POST['imagen'];
+                $imagen="";
+                if(empty($_POST['imagen'])){
+                    //$imagen="https://i.scdn.co/image/ab67616d0000b273e73a74043b1b7f721627b8f4";
+                    $imagen="/blake/resources/img/discogenerico.png";
+                }else{
+                    $imagen = $_POST['imagen'];
+                }
 
                 $disco = new stdClass();
                 $disco->id=$id;
@@ -104,6 +111,8 @@ require_once("app/controller/UsuariosController.php");
 
                 $this->modelo->actualizarDisco($disco);
                 header('Location: '.BASE_URL."discos");
+            }else{
+
             }
         }
 

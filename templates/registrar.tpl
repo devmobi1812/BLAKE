@@ -7,11 +7,11 @@
                 <div class="contenedorFormulario">
                     <h1>Registrar</h2>
                         <form method="POST" action="registrado">
-                            <label for="">Nombre de usuario</label>
+                            <label for="">Nombre de usuario *</label>
                             <input type="text" name="nombre">
-                            <label for="">Contraseña</label>
+                            <label for="">Contraseña *</label>
                             <input type="password" name="password" id="">
-                            <label for="">Repetir contraseña</label>
+                            <label for="">Repetir contraseña *</label>
                             <input type="password" name="verificar-password" id="">
                             <button id="btn-login" type="submit" class="btn btn-primary">Registrar</button>
                         </form>

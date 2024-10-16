@@ -8,4 +8,5 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="resources/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/1037df0a4d.js" crossorigin="anonymous"></script>
 </head>

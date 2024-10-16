@@ -4,7 +4,7 @@
     <div class="encabezado">
         <h1>Discos</h1>
         {if {$esAdmin}}
-        <a class="btn btn-primary" href="crear-disco">Crear Disco</a>
+        <a class="btn btn-primary" href="crear-disco">Crear Disco       <i class="fa-solid fa-plus"></i></a>
         {/if}
     </div>
     <div class="discos">
@@ -18,8 +18,8 @@
             </a>
             {if {$esAdmin}}
             <div class="btnAcciones">
-                <a class="btn btn-primary" href="editar-disco/{$disco->id}">✏</a>
-                <a class="btn btn-primary" href="eliminar-disco/{$disco->id}">🗑</a>
+                <a class="btn btn-primary" href="editar-disco/{$disco->id}"><i class="fa-solid fa-pen-to-square"></i></a><!--BOTON DE EDITAR-->
+                <a class="btn btn-primary" href="eliminar-disco/{$disco->id}"><i class="fa-solid fa-trash"></i></a><!--BOTON DE ELIMINAR-->
             </div>
             {/if}
         </div>

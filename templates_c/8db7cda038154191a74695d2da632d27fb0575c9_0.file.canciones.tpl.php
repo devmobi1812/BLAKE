@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-10-11 16:42:44
+/* Smarty version 4.5.1, created on 2024-10-11 19:45:24
   from 'C:\xampp\htdocs\BLAKE\templates\canciones.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_67093964d09b95_38346324',
+  'unifunc' => 'content_670964344953a9_57081924',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8db7cda038154191a74695d2da632d27fb0575c9' => 
     array (
       0 => 'C:\\xampp\\htdocs\\BLAKE\\templates\\canciones.tpl',
-      1 => 1728657519,
+      1 => 1728668622,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_67093964d09b95_38346324 (Smarty_Internal_Template $_smarty_tpl) {
+function content_670964344953a9_57081924 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>  
 <?php $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -68,15 +68,15 @@ $_smarty_tpl->tpl_vars['cancion']->do_else = false;
 </td>
                     <td>
                       <a class="btn btn-primary" href="cancion/<?php echo $_smarty_tpl->tpl_vars['cancion']->value->id;?>
-">👁</a>
+"><i class="fa-solid fa-eye"></i></a> <!--BOTON DE VER-->
                       <?php ob_start();
 echo $_smarty_tpl->tpl_vars['esAdmin']->value;
 $_prefixVariable2 = ob_get_clean();
 if ($_prefixVariable2) {?>
                         <a class="btn btn-primary" href="editar-cancion/<?php echo $_smarty_tpl->tpl_vars['cancion']->value->id;?>
-">✏</a>
+"><i class="fa-solid fa-pen-to-square"></i></a> <!--BOTON DE EDITAR-->
                         <a class="btn btn-primary eliminar-cancion" href="eliminar-cancion/<?php echo $_smarty_tpl->tpl_vars['cancion']->value->id;?>
-">🗑</a>
+"><i class="fa-solid fa-trash"></i></a><!--BOTON DE ELIMINAR-->
                       <?php }?>
                       
                     </td>
