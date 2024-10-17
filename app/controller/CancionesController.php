@@ -46,7 +46,7 @@ class CancionesController{
             $usuariosController->verificarUsuarios();
         }else if($usuariosController->chequearRol()){
             $opciones = $this->modelo->getOpciones();
-            $this->vista->crearCancion($opciones);
+            $this->vista->crearCancion($opciones, "");
         }else{
             print("No tienes los permisos suficientes");
             $this->index();

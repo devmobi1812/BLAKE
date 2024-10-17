@@ -1,6 +1,6 @@
 {include file='head.tpl'}  
 <body>
-    <main class="main-login">
+    <main>
         <div id="login">
             <div class="login">
                 <a href="inicio"><img src="/blake/resources/img/header/logo-blake-2024-70x.png" alt=""></a>

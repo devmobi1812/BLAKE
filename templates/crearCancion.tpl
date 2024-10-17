@@ -20,7 +20,9 @@
             <label for="">Link *</label>
             <input type="text" name="link" >
             
-            
+            {if !empty($error)}
+                    <div class="alert alert-danger" role="alert">{$error}</div>
+            {/if}
             <a id="btnCancelar" class="btn btn-primary" href="canciones">Cancelar</a>
             <button class="btn btn-primary" type="submit">Crear</button>
         </form>

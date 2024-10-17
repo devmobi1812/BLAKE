@@ -1,6 +1,6 @@
 <body>
     <header>  
-        <base href="{$base}">
+        
         <a id="logo" href="inicio">
             <img class="logo" src="/blake/resources/img/header/logo-blake-2024-70x.png" alt="">
         </a>

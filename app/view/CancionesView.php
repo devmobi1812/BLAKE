@@ -26,10 +26,11 @@
             $this->smarty->display('templates/cancion.tpl');
         }
 
-        function crearCancion($opciones){
+        function crearCancion($opciones, $error =""){
             $titulo = "Crear Canción";
             $this->smarty->assign('titulo', $titulo);
             $this->smarty->assign('opciones', $opciones);
+            $this->smarty->assign('error', $error);
             $this->smarty->display('templates/crearCancion.tpl');
         }
 

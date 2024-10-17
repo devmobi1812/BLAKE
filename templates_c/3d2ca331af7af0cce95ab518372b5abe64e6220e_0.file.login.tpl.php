@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-10-17 12:58:34
+/* Smarty version 4.5.1, created on 2024-10-17 15:00:24
   from 'C:\xampp\htdocs\BLAKE\templates\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_6710edda75e720_79277331',
+  'unifunc' => 'content_67110a684f2b65_39679946',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3d2ca331af7af0cce95ab518372b5abe64e6220e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\BLAKE\\templates\\login.tpl',
-      1 => 1729162704,
+      1 => 1729169727,
       2 => 'file',
     ),
   ),
@@ -22,11 +22,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6710edda75e720_79277331 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67110a684f2b65_39679946 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>  
 <body>
-    <main class="main-login">
+    <main>
         <div id="login">
             <div class="login">
                 <a href="inicio"><img src="/blake/resources/img/header/logo-blake-2024-70x.png" alt=""></a>
