@@ -3,7 +3,7 @@
 
 <div class="contenedor">
     <h1>Crear Disco</h1>
-    <form action="guardar-disco" method="post">
+    <form action="disco/guardar" method="post">
         <label for="">Nombre *</label>
         <input type="text" name="nombre">
 

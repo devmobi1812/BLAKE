@@ -6,7 +6,15 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener('click', function(event) {
             event.preventDefault();
             let id = this.getAttribute('href').split('/').pop();
-            confirmarEliminacion(event, 'eliminar-cancion/' + id);
+            confirmarEliminacion(event, 'cancion/eliminar/' + id);
+        });
+    });
+
+    document.querySelectorAll('.eliminar-disco').forEach(function(button) {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            let id = this.getAttribute('href').split('/').pop();
+            confirmarEliminacion(event, 'disco/eliminar/' + id);
         });
     });
 

@@ -13,7 +13,7 @@
                 <li><a href="salir">Salir</a></li>
             {/if}
             {if !{$estaLogueado}}
-                <li><a href="iniciar">Iniciar sesión</a></li>
+                <li><a href="login">Iniciar sesión</a></li>
                 <li><a href="registrar">Registrar</a></li>
             {/if}
             
@@ -29,7 +29,7 @@
                     <li><a href="salir">Salir</a></li>
                 {/if}
                 {if !{$estaLogueado}}
-                <li><a href="iniciar">Iniciar sesión</a></li>
+                <li><a href="login">Iniciar sesión</a></li>
                     <li><a href="registrar">Registrar</a></li>
                 {/if}
             </ul>

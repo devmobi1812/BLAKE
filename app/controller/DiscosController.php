@@ -123,6 +123,7 @@ require_once("app/controller/UsuariosController.php");
                 $usuariosController->verificarUsuarios();
             }else if($usuariosController->chequearRol()){
                 $this->modelo->eliminarDisco($id);
+                header('Location: '.BASE_URL."discos");
             }else{
                 print("No tienes los permisos suficientes");
                 $this->mostrarDiscos();

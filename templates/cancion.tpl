@@ -29,8 +29,8 @@
                     <td>{$cancion.duracion}</td>
                     <td>
                         {if {$esAdmin}}
-                            <a class="btn btn-primary" href="editar-cancion/{$cancion.id}"><i class="fa-solid fa-pen-to-square"></i></a> <!--BOTON DE EDITAR-->
-                            <a class="btn btn-primary eliminar-cancion" href="eliminar-cancion/{$cancion.id}"><i class="fa-solid fa-trash"></i></a><!--BOTON DE ELIMINAR-->
+                            <a class="btn btn-primary" href="cancion/editar/{$cancion.id}"><i class="fa-solid fa-pen-to-square"></i></a> <!--BOTON DE EDITAR-->
+                            <a class="btn btn-primary eliminar-cancion" href="cancion/eliminar/{$cancion.id}"><i class="fa-solid fa-trash"></i></a><!--BOTON DE ELIMINAR-->
                         {/if}
                     </td>
                     </tr>

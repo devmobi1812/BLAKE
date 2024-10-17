@@ -3,7 +3,7 @@
 
     <div class="contenedor">
         <h1>Crear Canción</h1>
-        <form action="guardar-cancion" method="post">
+        <form action="cancion/guardar" method="post">
             <label for="">Nombre *</label>
             <input type="text" name="nombre">
             

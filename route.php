@@ -10,7 +10,7 @@
     $action = $_GET['action'];
     if($action!=""){
         $parameters = explode('/',$action);
-        /*
+        
         switch($parameters[0]){
             case "inicio":
                 $cancionesController->index();
@@ -19,54 +19,104 @@
                 $cancionesController->index();
                 break;
             case "cancion":
-                switch(isset($parameters[1]) && $parameters[1]!=null){
-                    case "crear":
-                        $cancionesController->crearCancion();
-                        break;
-                    case "editar":
-                        $cancionesController->editarCancion($parameters[1]);
-                        break;
-                    case "actualizar":
-                        $cancionesController->actualizarCancion();
-                        break;
-                    case "eliminar":
-                        $cancionesController->eliminarCancion($parameters[1]);
-                        $cancionesController->index();
-                        break;
-                    default:
-                        // VISUALIZAR
-                        break;
+                if(isset($parameters[1]) && $parameters[1]!=null){
+                    switch($parameters[1]){
+                        case "crear":
+                            $cancionesController->crearCancion();
+                            break;
+                        case "guardar":
+                            $cancionesController->guardarCancion();
+                            break;
+                        case "editar":
+                            $cancionesController->editarCancion($parameters[2]);
+                            break;
+                        case "actualizar":
+                            $cancionesController->actualizarCancion();
+                            break;
+                        case "eliminar":
+                            $cancionesController->eliminarCancion($parameters[2]);
+                            break;
+                        default:
+                            // VISUALIZAR
+                            $cancionesController->verCancion($parameters[1]);
+                            break;
+                    }
+                }else{
+                    $cancionesController->index();
+                    break;
                 }
+                break;
             case "discos":
                 $discosController->mostrarDiscos();
                 break;
             case "disco":
-                switch(isset($parameters[1]) && $parameters[1]!=null){
-                    case "crear":
-                        $discosController->crearDisco();
-                        break;
-                    case "editar":
-                        $discosController->editarDisco($parameters[1]);
-                        break;
-                    case "actualizar":
-                        $discosController->actualizarDisco();
-                        break;
-                    case "eliminar":
-                        $discosController->eliminarDisco($parameters[1]);
-                        $discosController->mostrarDiscos();
-                        break;
-                    default:
-                        // VISUALIZAR
-                        break;
+                if(isset($parameters[1]) && $parameters[1]!=null){
+                    switch($parameters[1]){
+                        case "crear":
+                            $discosController->crearDisco();
+                            break;
+                        case "guardar":
+                            $discosController->guardarDisco();
+                            break;
+                        case "editar":
+                            $discosController->editarDisco($parameters[2]);
+                            break;
+                        case "actualizar":
+                            $discosController->actualizarDisco();
+                            break;
+                        case "eliminar":
+                            $discosController->eliminarDisco($parameters[2]);
+                            break;
+                        default:
+                            // VISUALIZAR
+                            $discosController->verDisco($parameters[1]);
+                            break;
+                    }
+                }else{
+                    $discosController->mostrarDiscos();
+                    break;
                 }
-            case "login":
-                $usuariosController->verificarUsuarios();
                 break;
-            case "registrarse":
+            case "login":
+                if(isset($parameters[1]) && $parameters[1]!=null){
+                    switch($parameters[1]){
+                        case "validar":
+                            $usuariosController->validar();
+                            break;
+                        default:
+                            break;
+                    }
+                }else{
+                    $usuariosController->verificarUsuarios();
+                    break;
+                }
+                break;
+            case "registrar":
+                if(isset($parameters[1]) && $parameters[1]!=null){
+                    switch($parameters[1]){
+                        case "validar":
+                            $usuariosController->registrar();
+                            break;
+                        default:
+                            break;
+                    }
+                }else{
+                    $usuariosController->verRegistrar();
+                    break;
+                }
                 break;
             case "salir":
+                $usuariosController->salir();
                 break;
-        }*/
+            default:
+                $cancionesController->index();
+                break;
+        }
+    }else{
+        $cancionesController->index();
+        
+    }
+        /*
         switch($parameters[0]){
             case "inicio":
                 $cancionesController->index();
@@ -134,6 +184,9 @@
     }else{
         $cancionesController->index();
     }
+        */
+    
+
     
 
 ?>

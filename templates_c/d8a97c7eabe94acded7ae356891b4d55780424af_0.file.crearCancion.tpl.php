@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-10-11 19:52:10
+/* Smarty version 4.5.1, created on 2024-10-17 11:54:24
   from 'C:\xampp\htdocs\BLAKE\templates\crearCancion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_670965ca4357d5_53450272',
+  'unifunc' => 'content_6710ded0b39e28_01737842',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd8a97c7eabe94acded7ae356891b4d55780424af' => 
     array (
       0 => 'C:\\xampp\\htdocs\\BLAKE\\templates\\crearCancion.tpl',
-      1 => 1728668985,
+      1 => 1729158465,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_670965ca4357d5_53450272 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6710ded0b39e28_01737842 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>  
 <?php $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -31,7 +31,7 @@ $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smar
 
     <div class="contenedor">
         <h1>Crear Canción</h1>
-        <form action="guardar-cancion" method="post">
+        <form action="cancion/guardar" method="post">
             <label for="">Nombre *</label>
             <input type="text" name="nombre">
             

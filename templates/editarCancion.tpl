@@ -2,7 +2,7 @@
 {include file='header.tpl'} 
     <div class="contenedor">
         <h1>Editar Canción</h1>
-        <form action="actualizar-cancion" method="post">
+        <form action="cancion/actualizar" method="post">
             <input type="hidden" name="id" value="{$cancion.id}">
             <label for="">Nombre *</label>
             <input type="text" name="nombre" value="{$cancion.nombre}">

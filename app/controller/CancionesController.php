@@ -113,7 +113,7 @@ class CancionesController{
             $usuariosController->verificarUsuarios();
         }else if($usuariosController->chequearRol()){
             $this->modelo->eliminarCancion($id);
-            header('Location: '.BASE_URL);
+            header('Location: '.BASE_URL."canciones");
         }else{
             print("No tienes los permisos suficientes");
             $this->index();

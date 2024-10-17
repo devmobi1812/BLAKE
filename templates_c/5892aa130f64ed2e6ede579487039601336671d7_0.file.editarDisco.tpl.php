@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-10-11 20:06:23
+/* Smarty version 4.5.1, created on 2024-10-17 12:59:52
   from 'C:\xampp\htdocs\BLAKE\templates\editarDisco.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_6709691f06e7b5_99404171',
+  'unifunc' => 'content_6710ee28a556a5_65640987',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5892aa130f64ed2e6ede579487039601336671d7' => 
     array (
       0 => 'C:\\xampp\\htdocs\\BLAKE\\templates\\editarDisco.tpl',
-      1 => 1728669978,
+      1 => 1729158168,
       2 => 'file',
     ),
   ),
@@ -23,14 +23,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6709691f06e7b5_99404171 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6710ee28a556a5_65640987 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>  
 <?php $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?> 
     <div class="contenedor">
         <h1>Editar Disco</h1>
-        <form action="actualizar-disco" method="post">
+        <form action="disco/actualizar" method="post">
             <input type="hidden" name="id" value="<?php echo $_smarty_tpl->tpl_vars['disco']->value['id'];?>
 ">
             <label for="">Nombre *</label>
