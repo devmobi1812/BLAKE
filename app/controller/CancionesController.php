@@ -68,6 +68,9 @@ class CancionesController{
     
             $this->modelo->insertarCancion($cancion);
             header('Location: '.BASE_URL);
+        }else{
+            $opciones = $this->modelo->getOpciones();
+            $this->vista->crearCancion($opciones, "Complete todos los campos requeridos.");
         }
         
 
@@ -88,8 +91,9 @@ class CancionesController{
         
     }
     public function actualizarCancion(){
+        $id=$_POST['id'];
         if(!empty($_POST['nombre']) && !empty($_POST['disco']) && !empty($_POST['duracion']) && !empty($_POST['link'])){
-            $id=$_POST['id'];
+            
             $nombre = $_POST['nombre'];
             $disco = $_POST['disco'];
             $duracion = $_POST['duracion'];
@@ -104,6 +108,10 @@ class CancionesController{
 
             $this->modelo->actualizarCancion($cancion);
             header('Location: '.BASE_URL."canciones");
+        }else{
+            $cancion = $this->modelo->getCancion($id);
+            $opciones = $this->modelo->getOpciones();
+            $this->vista->editarCancion($cancion, $opciones, "Complete todos los campos requeridos.");
         }
     }
 

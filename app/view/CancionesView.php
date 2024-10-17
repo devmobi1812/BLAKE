@@ -34,9 +34,10 @@
             $this->smarty->display('templates/crearCancion.tpl');
         }
 
-        function editarCancion($cancion, $opciones){
+        function editarCancion($cancion, $opciones, $error=""){
             $titulo = "Editar Canción";
             $this->smarty->assign('titulo', $titulo);
+            $this->smarty->assign('error', $error);
             $this->smarty->assign('opciones', $opciones);
             $this->smarty->assign('cancion', $cancion);
             $this->smarty->display('templates/editarCancion.tpl');

@@ -16,6 +16,10 @@
             {else}
                 <input type="text" name="imagen" value="">
             {/if}
+
+            {if !empty($error)}
+                    <div class="area-error">{$error}</div>
+            {/if}
             <a id="btnCancelar" class="btn btn-primary" href="discos">Cancelar</a>
             <button class="btn btn-primary" type="submit">Guardar</button>
         </form>

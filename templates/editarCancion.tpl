@@ -23,6 +23,9 @@
             <label for="">Link *</label>
             <input type="text" name="link" value="{$cancion.link}">
             
+            {if !empty($error)}
+                    <div class="area-error">{$error}</div>
+            {/if}
             
             <a id="btnCancelar" class="btn btn-primary" href="canciones">Cancelar</a>
             <button class="btn btn-primary" type="submit">Guardar</button>
