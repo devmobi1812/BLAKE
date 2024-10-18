@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-10-17 12:59:52
+/* Smarty version 4.5.1, created on 2024-10-18 01:59:49
   from 'C:\xampp\htdocs\BLAKE\templates\editarDisco.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_6710ee28a556a5_65640987',
+  'unifunc' => 'content_6711a4f555a588_30604749',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5892aa130f64ed2e6ede579487039601336671d7' => 
     array (
       0 => 'C:\\xampp\\htdocs\\BLAKE\\templates\\editarDisco.tpl',
-      1 => 1729158168,
+      1 => 1729197519,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6710ee28a556a5_65640987 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6711a4f555a588_30604749 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>  
 <?php $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -56,6 +56,11 @@ if ($_prefixVariable3) {?>
 ">
             <?php } else { ?>
                 <input type="text" name="imagen" value="">
+            <?php }?>
+
+            <?php if (!empty($_smarty_tpl->tpl_vars['error']->value)) {?>
+                    <div class="area-error"><?php echo $_smarty_tpl->tpl_vars['error']->value;?>
+</div>
             <?php }?>
             <a id="btnCancelar" class="btn btn-primary" href="discos">Cancelar</a>
             <button class="btn btn-primary" type="submit">Guardar</button>

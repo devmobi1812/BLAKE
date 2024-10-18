@@ -13,7 +13,7 @@
             <label for="">Elegir disco nuevo *</label>
             <select name="disco" id="">
                 {foreach from=$opciones item=$opcion}
-                <option value="{$opcion->id}">{$opcion->nombre}</option>  
+                <option value="{$opcion->id}" {if $opcion->nombre == $cancion.disco_nombre}selected{/if}>{$opcion->nombre}</option>  
                 {/foreach}
             </select>
 
