@@ -91,8 +91,9 @@ require_once("app/controller/UsuariosController.php");
             }
         }
         public function actualizarDisco(){
+            $id=$_POST['id'];
+            $usuariosController = new UsuariosController();
             if(!empty($_POST['nombre']) && !empty($_POST['anio'])){
-                $id=$_POST['id'];
                 $nombre = $_POST['nombre'];
                 $anio = $_POST['anio'];
                 $imagen="";
@@ -112,7 +113,8 @@ require_once("app/controller/UsuariosController.php");
                 $this->modelo->actualizarDisco($disco);
                 header('Location: '.BASE_URL."discos");
             }else{
-
+                $disco = $this->modelo->getDisco($id);
+                $this->vista->editarDisco($disco, );
             }
         }
 

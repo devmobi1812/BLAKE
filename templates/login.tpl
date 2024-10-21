@@ -11,6 +11,9 @@
                             <input type="text" name="nombre">
                             <label for="">Contraseña</label>
                             <input type="password" name="password" id="">
+                            {if !empty($error)}
+                                    <div class="area-error">{$error}</div>
+                            {/if}
                             <button id="btn-login" type="submit" class="btn btn-primary">Acceder</button>
                         </form>
                 </div>

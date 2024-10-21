@@ -10,7 +10,7 @@
             <label for="">Año *</label>
             <input type="number" name="anio" value="{$disco.anio}">
 
-            <label for="">Imagen *</label>
+            <label for="">Imagen</label>
             {if {{$disco.imagen}!={"/blake/resources/img/discogenerico.png"}}}
                 <input type="text" name="imagen" value="{$disco.imagen}">
             {else}
@@ -20,7 +20,7 @@
             {if !empty($error)}
                     <div class="area-error">{$error}</div>
             {/if}
-            <a id="btnCancelar" class="btn btn-primary" href="discos">Cancelar</a>
+            <a id="btnCancelar" class="btn btn-warning" href="discos">Cancelar</a>
             <button class="btn btn-primary" type="submit">Guardar</button>
         </form>
     </div>

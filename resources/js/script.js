@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
             text: "No podrás revertir esto",
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#d33',
-            cancelButtonColor: '#3085d6',
+            confirmButtonColor: '#0c9a9c',
+            cancelButtonColor: '#e74c3c',
             cancelButtonText: "Cancelar",
             confirmButtonText: 'Eliminar',
             customClass: {

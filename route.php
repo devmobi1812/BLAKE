@@ -7,6 +7,7 @@
     $cancionesController = new CancionesController();
     $discosController = new DiscosController();
     $usuariosController = new UsuariosController();
+
     $action = $_GET['action'];
     if($action!=""){
         $parameters = explode('/',$action);
@@ -36,9 +37,11 @@
                         case "eliminar":
                             $cancionesController->eliminarCancion($parameters[2]);
                             break;
+                        case "ver":
+                            $cancionesController->verCancion($parameters[2]);
+                            break;
                         default:
-                            // VISUALIZAR
-                            $cancionesController->verCancion($parameters[1]);
+                            $usuariosController->verError();
                             break;
                     }
                 }else{
@@ -67,9 +70,11 @@
                         case "eliminar":
                             $discosController->eliminarDisco($parameters[2]);
                             break;
+                        case "ver":
+                            $discosController->verDisco($parameters[2]);
+                            break;
                         default:
-                            // VISUALIZAR
-                            $discosController->verDisco($parameters[1]);
+                            $usuariosController->verError();
                             break;
                     }
                 }else{
@@ -109,12 +114,11 @@
                 $usuariosController->salir();
                 break;
             default:
-                $cancionesController->index();
+                $usuariosController->verError();
                 break;
         }
     }else{
         $cancionesController->index();
-        
     }
         /*
         switch($parameters[0]){

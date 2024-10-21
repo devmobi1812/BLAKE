@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-10-17 11:53:51
+/* Smarty version 4.5.1, created on 2024-10-21 12:41:18
   from 'C:\xampp\htdocs\BLAKE\templates\disco.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_6710deaf314416_50195812',
+  'unifunc' => 'content_67162fce8f3713_07912976',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f76524d01c4f2c54d02060f9e700d02b51edc9c9' => 
     array (
       0 => 'C:\\xampp\\htdocs\\BLAKE\\templates\\disco.tpl',
-      1 => 1729158284,
+      1 => 1729506331,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6710deaf314416_50195812 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67162fce8f3713_07912976 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>  
 <?php $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -61,7 +61,7 @@ $_smarty_tpl->tpl_vars['disk']->do_else = false;
                     <td><?php echo $_smarty_tpl->tpl_vars['disk']->value->duracion;?>
 </td>
                     <td>
-                        <a class="btn btn-primary" href="cancion/<?php echo $_smarty_tpl->tpl_vars['disk']->value->id;?>
+                        <a class="btn btn-primary" href="cancion/ver/<?php echo $_smarty_tpl->tpl_vars['disk']->value->id;?>
 "><i class="fa-solid fa-eye"></i></a> <!--BOTON DE VER-->
                         <?php ob_start();
 echo $_smarty_tpl->tpl_vars['esAdmin']->value;

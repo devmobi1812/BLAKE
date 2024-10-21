@@ -32,6 +32,15 @@
             $this->vista->registrar();
         }
 
+        function verError($numero="", $texto=""){
+            if(empty($numero) && empty($texto)){
+                $numero="404";
+                $texto="La pagina solicitada no existe.";
+            }
+            
+            $this->vista->errorServidor($numero, $texto);
+        }
+
         function registrar(){
             $usuarios = $this->modelo->getUsuarios();
             if($usuarios){
@@ -62,9 +71,11 @@
                     $this->validar();
 
                 }else{
-                    return print("Error, las contraseñas no son iguales");
+                    $this->vista->registrar("Las contraseñas no son iguales.");
                 }
                 
+            }else{
+                $this->vista->registrar("Complete todos los campos requeridos.");
             }
         }
         
@@ -82,7 +93,11 @@
                     $_SESSION["usuario"] = $nombre;
                     //print("USUARIO LOGEADO: ".$nombre);
                     header('Location: '.BASE_URL."canciones");
+                }else{
+                    $this->vista->login("Los datos ingresados son incorrectos.");
                 }
+            }else{
+                $this->vista->login("Complete todos los campos requeridos.");
             }
         }
 

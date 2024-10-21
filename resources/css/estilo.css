@@ -129,6 +129,18 @@ main>.contenedor{
     border-color: #0c9a9c;
 }
 
+.btn-warning{
+    color: #ffffff;
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+.btn-edit{
+    color: #ffffff;
+    background-color: #e67e22;
+    border-color: #e67e22;
+}
+
 .btn-primary:hover {
     color: #fff;
     background-color: #096e70;
@@ -141,6 +153,33 @@ main>.contenedor{
     border-color: #096e70;
     box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.5);
 }
+
+.btn-warning:hover {
+    color: #ffffff;
+    background-color: #c0392b;
+    border-color: #c0392b;
+}
+
+.btn-warning:focus, .btn-warning.focus {
+    color: #ffffff;
+    background-color: #e74c3c;
+    border-color: #c0392b;
+    box-shadow: 0 0 0 0.2rem rgba(231, 76, 60, 0.5);
+}
+
+.btn-edit:hover {
+    color: #ffffff;
+    background-color: #d35400;
+    border-color: #d35400;
+}
+
+.btn-edit:focus, .btn-edit.focus {
+    color: #ffffff;
+    background-color: #e67e22;
+    border-color: #d35400;
+    box-shadow: 0 0 0 0.2rem rgba(230, 126, 34, 0.5);
+}
+
 
 
 
@@ -219,8 +258,7 @@ select {
 }
 
 /*BOTON DE LOS FORMULARIOS*/
-#btnCancelar{
-    
+#btnCancelar, #btn-login{
     padding: 0.375rem 0.75rem;
     text-align: center;
     margin: 1rem 0 1rem 0;
@@ -232,6 +270,32 @@ button{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+
+.error{
+    display: inline-block;
+    height: 100vh;
+    background-color: #dc3545;
+    color:white;
+
+}
+.error>h1{
+    margin-left: 2rem;
+    font-size: 8rem;
+}
+.error>p{
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+.btnError{
+    margin-left: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: #e74c3c;
+    background-color: #ffffff;
+    border-color: #ffffff;
 }
 
 @media screen and (min-width: 660px) {

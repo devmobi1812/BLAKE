@@ -23,21 +23,24 @@ class CancionesController{
             $esAdmin = $usuariosController->chequearRol();
             $estaLogueado=true;
         }
-
-        
         $this->vista->mostrarCanciones($canciones, $esAdmin, $estaLogueado);
     }
 
     public function verCancion($id){
         $usuariosController = new UsuariosController();
         $cancion = $this->modelo->getCancion($id);
-        $esAdmin = false;
-        $estaLogueado = false;
-        if($usuariosController->chequearLogueado()){
-            $esAdmin = $usuariosController->chequearRol();
-            $estaLogueado=true;
+        if($cancion){ //    SI CANCION EXISTE
+            $esAdmin = false;
+            $estaLogueado = false;
+            if($usuariosController->chequearLogueado()){
+                $estaLogueado=true;
+                $esAdmin = $usuariosController->chequearRol();
+            }
+            $this->vista->mostrarCancion($cancion,$esAdmin, $estaLogueado);
+        }else{
+            $usuariosController->verError();
         }
-        $this->vista->mostrarCancion($cancion,$esAdmin, $estaLogueado);
+        
     }
 
     public function crearCancion(){
@@ -48,8 +51,7 @@ class CancionesController{
             $opciones = $this->modelo->getOpciones();
             $this->vista->crearCancion($opciones, "");
         }else{
-            print("No tienes los permisos suficientes");
-            $this->index();
+            $usuariosController->verError("403", "No tienes los permisos suficientes para ejecutar dicha acción.");
         }
     }
 
@@ -87,8 +89,7 @@ class CancionesController{
             $opciones = $this->modelo->getOpciones();
             $this->vista->editarCancion($cancion, $opciones);
         }else{
-            print("No tienes los permisos suficientes");
-            $this->index();
+            $usuariosController->verError("403", "No tienes los permisos suficientes para ejecutar dicha acción.");
         }
         
     }
@@ -125,8 +126,7 @@ class CancionesController{
             $this->modelo->eliminarCancion($id);
             header('Location: '.BASE_URL."canciones");
         }else{
-            print("No tienes los permisos suficientes");
-            $this->index();
+            $usuariosController->verError("403", "No tienes los permisos suficientes para ejecutar dicha acción.");
         }
     }
 }

@@ -13,6 +13,9 @@
                             <input type="password" name="password" id="">
                             <label for="">Repetir contraseña *</label>
                             <input type="password" name="verificar-password" id="">
+                            {if !empty($error)}
+                                    <div class="area-error">{$error}</div>
+                            {/if}
                             <button id="btn-login" type="submit" class="btn btn-primary">Registrar</button>
                         </form>
                 </div>

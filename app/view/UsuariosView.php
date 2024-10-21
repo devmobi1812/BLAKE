@@ -9,16 +9,26 @@
             $this->smarty->assign('base', BASE_URL);
         }
 
-        function login(){
+        function login($error=""){
             $titulo = "Acceder";
             $this->smarty->assign('titulo', $titulo);
+            $this->smarty->assign('error', $error);
             $this->smarty->display('templates/login.tpl');
         }
 
-        function registrar(){
+        function registrar($error = ""){
             $titulo="Registrar";
             $this->smarty->assign('titulo', $titulo);
+            $this->smarty->assign('error', $error);
             $this->smarty->display('templates/registrar.tpl');
+        }
+
+        function errorServidor($error, $texto){
+            $titulo="Error";
+            $this->smarty->assign('titulo', $titulo);
+            $this->smarty->assign('numero', $error);
+            $this->smarty->assign('texto', $texto);
+            $this->smarty->display("templates/errorServidor.tpl");
         }
     }
 ?>

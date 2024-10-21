@@ -23,7 +23,7 @@
                     <td>{$disk->artista_nombre}</td>
                     <td>{$disk->duracion}</td>
                     <td>
-                        <a class="btn btn-primary" href="cancion/{$disk->id}"><i class="fa-solid fa-eye"></i></a> <!--BOTON DE VER-->
+                        <a class="btn btn-primary" href="cancion/ver/{$disk->id}"><i class="fa-solid fa-eye"></i></a> <!--BOTON DE VER-->
                         {if {$esAdmin}}
                             <a class="btn btn-primary" href="cancion/editar/{$disk->id}"><i class="fa-solid fa-pen-to-square"></i></a> <!--BOTON DE EDITAR-->
                             <a class="btn btn-primary eliminar-cancion" href="cancion/eliminar/{$disk->id}"><i class="fa-solid fa-trash"></i></a><!--BOTON DE ELIMINAR-->
