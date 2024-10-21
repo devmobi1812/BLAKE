@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-10-17 22:44:14
+/* Smarty version 4.5.1, created on 2024-10-21 13:21:44
   from 'C:\xampp\htdocs\BLAKE\templates\crearCancion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_6711771eb8d7c9_77748747',
+  'unifunc' => 'content_671639481311b8_07482730',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd8a97c7eabe94acded7ae356891b4d55780424af' => 
     array (
       0 => 'C:\\xampp\\htdocs\\BLAKE\\templates\\crearCancion.tpl',
-      1 => 1729197482,
+      1 => 1729509698,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6711771eb8d7c9_77748747 (Smarty_Internal_Template $_smarty_tpl) {
+function content_671639481311b8_07482730 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>  
 <?php $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -61,7 +61,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     <div class="area-error"><?php echo $_smarty_tpl->tpl_vars['error']->value;?>
 </div>
             <?php }?>
-            <a id="btnCancelar" class="btn btn-primary" href="canciones">Cancelar</a>
+            <a id="btnCancelar" class="btn btn-warning" href="canciones">Cancelar</a>
             <button class="btn btn-primary" type="submit">Crear</button>
         </form>
     </div>

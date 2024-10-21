@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-10-17 11:59:59
+/* Smarty version 4.5.1, created on 2024-10-21 13:23:33
   from 'C:\xampp\htdocs\BLAKE\templates\crearDisco.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_6710e01fb10261_96916469',
+  'unifunc' => 'content_671639b5a13e11_47769305',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ceacf3c7c482a72e356f50de5f4a37d71ad555ce' => 
     array (
       0 => 'C:\\xampp\\htdocs\\BLAKE\\templates\\crearDisco.tpl',
-      1 => 1729158440,
+      1 => 1729509808,
       2 => 'file',
     ),
   ),
@@ -23,13 +23,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6710e01fb10261_96916469 (Smarty_Internal_Template $_smarty_tpl) {
+function content_671639b5a13e11_47769305 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>  
 <?php $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?> 
 
 <div class="contenedor">
+    <a href="">Volver</a>
     <h1>Crear Disco</h1>
     <form action="disco/guardar" method="post">
         <label for="">Nombre *</label>
@@ -40,8 +41,13 @@ $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smar
 
         <label for="">Imagen</label>
         <input type="text" name="imagen" >
+
+        <?php if (!empty($_smarty_tpl->tpl_vars['error']->value)) {?>
+                <div class="area-error"><?php echo $_smarty_tpl->tpl_vars['error']->value;?>
+</div>
+        <?php }?>
         
-        <a id="btnCancelar" class="btn btn-primary" href="discos">Cancelar</a>
+        <a id="btnCancelar" class="btn btn-warning" href="discos">Cancelar</a>
         <button class="btn btn-primary" type="submit">Crear</button>
     </form>
 </div>

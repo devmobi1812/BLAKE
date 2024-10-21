@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-10-21 12:41:18
+/* Smarty version 4.5.1, created on 2024-10-21 13:24:30
   from 'C:\xampp\htdocs\BLAKE\templates\disco.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_67162fce8f3713_07912976',
+  'unifunc' => 'content_671639ee60fa87_15729388',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f76524d01c4f2c54d02060f9e700d02b51edc9c9' => 
     array (
       0 => 'C:\\xampp\\htdocs\\BLAKE\\templates\\disco.tpl',
-      1 => 1729506331,
+      1 => 1729509865,
       2 => 'file',
     ),
   ),
@@ -23,13 +23,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_67162fce8f3713_07912976 (Smarty_Internal_Template $_smarty_tpl) {
+function content_671639ee60fa87_15729388 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>  
 <?php $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>   
     
     <div class="contenedor">
+        <a href="discos">Volver</a>
         <h1>Canciones del Disco "<?php echo $_smarty_tpl->tpl_vars['discos']->value[0]->disco_nombre;?>
 "</h1>
         

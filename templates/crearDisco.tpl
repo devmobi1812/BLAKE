@@ -17,7 +17,7 @@
                 <div class="area-error">{$error}</div>
         {/if}
         
-        <a id="btnCancelar" class="btn btn-primary" href="discos">Cancelar</a>
+        <a id="btnCancelar" class="btn btn-warning" href="discos">Cancelar</a>
         <button class="btn btn-primary" type="submit">Crear</button>
     </form>
 </div>

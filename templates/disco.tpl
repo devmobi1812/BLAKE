@@ -2,6 +2,7 @@
 {include file='header.tpl'}   
     
     <div class="contenedor">
+        <a href="discos">Volver</a>
         <h1>Canciones del Disco "{$discos[0]->disco_nombre}"</h1>
         
             <table class="table-dark">
