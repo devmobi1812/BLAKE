@@ -119,8 +119,10 @@ main>.contenedor{
     color: #212529;
     background-color: transparent;
     border: 1px solid transparent;
-    border-radius: 0.25rem;
+    /*border-radius: 0.25rem;*/
+    border-radius: 1rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin-top: 16px;
 }
 
 .btn-primary {
@@ -180,7 +182,14 @@ main>.contenedor{
     box-shadow: 0 0 0 0.2rem rgba(230, 126, 34, 0.5);
 }
 
-
+.btn-volver{
+    margin-top:1rem;
+    text-decoration: none;
+    background-color:#0c9a9c;
+    color: white;
+    padding: 0.75rem 1rem 0.75rem 1rem;
+    border-radius: 1rem;
+}
 
 
 .disco-botones>a{

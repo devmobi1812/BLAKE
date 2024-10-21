@@ -35,7 +35,13 @@ require_once("app/controller/UsuariosController.php");
                 $estaLogueado=true;
             }
 
-            $this->vista->mostrarDisco($disco,$esAdmin, $estaLogueado);
+            if($disco){
+                $this->vista->mostrarDisco($disco,$esAdmin, $estaLogueado);
+            }else{
+                $usuariosController->verError("", "Todavia no existen canciones para este disco.");
+            }
+
+            
         }
         
         public function crearDisco(){
@@ -45,8 +51,7 @@ require_once("app/controller/UsuariosController.php");
             }else if($usuariosController->chequearRol()){
                 $this->vista->crearDisco();
             }else{
-                print("No tienes los permisos suficientes");
-                $this->mostrarDiscos();
+                $usuariosController->verError("403", "No tienes los permisos suficientes para ejecutar dicha acción.");
             }
             
         }
@@ -86,8 +91,7 @@ require_once("app/controller/UsuariosController.php");
                 $disco = $this->modelo->getDisco($id);
                 $this->vista->editarDisco($disco);
             }else{
-                print("No tienes los permisos suficientes");
-                $this->mostrarDiscos();
+                $usuariosController->verError("403", "No tienes los permisos suficientes para ejecutar dicha acción.");
             }
         }
         public function actualizarDisco(){
@@ -127,8 +131,7 @@ require_once("app/controller/UsuariosController.php");
                 $this->modelo->eliminarDisco($id);
                 header('Location: '.BASE_URL."discos");
             }else{
-                print("No tienes los permisos suficientes");
-                $this->mostrarDiscos();
+                $usuariosController->verError("403", "No tienes los permisos suficientes para ejecutar dicha acción.");
             }
 
             

@@ -2,6 +2,7 @@
 {include file='header.tpl'} 
 
     <div class="contenedor">
+        <a class="btn-volver" href="" id="btn-volver">Volver</a>
         <h1>Detalles de Canción</h1>
             <table class="table-dark">
                 <thead>
@@ -29,8 +30,8 @@
                     <td>{$cancion.duracion}</td>
                     <td>
                         {if {$esAdmin}}
-                            <a class="btn btn-primary" href="cancion/editar/{$cancion.id}"><i class="fa-solid fa-pen-to-square"></i></a> <!--BOTON DE EDITAR-->
-                            <a class="btn btn-primary eliminar-cancion" href="cancion/eliminar/{$cancion.id}"><i class="fa-solid fa-trash"></i></a><!--BOTON DE ELIMINAR-->
+                            <a class="btn btn-edit" href="cancion/editar/{$cancion.id}"><i class="fa-solid fa-pen-to-square"></i></a> <!--BOTON DE EDITAR-->
+                            <a class="btn btn-warning eliminar-cancion" href="cancion/eliminar/{$cancion.id}"><i class="fa-solid fa-trash"></i></a><!--BOTON DE ELIMINAR-->
                         {/if}
                     </td>
                     </tr>

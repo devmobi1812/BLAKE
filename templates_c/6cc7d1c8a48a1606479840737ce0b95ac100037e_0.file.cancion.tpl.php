@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-10-17 11:52:14
+/* Smarty version 4.5.1, created on 2024-10-21 14:50:24
   from 'C:\xampp\htdocs\BLAKE\templates\cancion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_6710de4e39f857_36109672',
+  'unifunc' => 'content_67164e107169d7_26718964',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6cc7d1c8a48a1606479840737ce0b95ac100037e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\BLAKE\\templates\\cancion.tpl',
-      1 => 1729158584,
+      1 => 1729515010,
       2 => 'file',
     ),
   ),
@@ -23,13 +23,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6710de4e39f857_36109672 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67164e107169d7_26718964 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>  
 <?php $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?> 
 
     <div class="contenedor">
+        <a class="btn-volver" href="" id="btn-volver">Volver</a>
         <h1>Detalles de Canción</h1>
             <table class="table-dark">
                 <thead>
@@ -72,9 +73,9 @@ echo $_prefixVariable2;?>
 echo $_smarty_tpl->tpl_vars['esAdmin']->value;
 $_prefixVariable3 = ob_get_clean();
 if ($_prefixVariable3) {?>
-                            <a class="btn btn-primary" href="cancion/editar/<?php echo $_smarty_tpl->tpl_vars['cancion']->value['id'];?>
+                            <a class="btn btn-edit" href="cancion/editar/<?php echo $_smarty_tpl->tpl_vars['cancion']->value['id'];?>
 "><i class="fa-solid fa-pen-to-square"></i></a> <!--BOTON DE EDITAR-->
-                            <a class="btn btn-primary eliminar-cancion" href="cancion/eliminar/<?php echo $_smarty_tpl->tpl_vars['cancion']->value['id'];?>
+                            <a class="btn btn-warning eliminar-cancion" href="cancion/eliminar/<?php echo $_smarty_tpl->tpl_vars['cancion']->value['id'];?>
 "><i class="fa-solid fa-trash"></i></a><!--BOTON DE ELIMINAR-->
                         <?php }?>
                     </td>

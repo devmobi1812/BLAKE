@@ -2,6 +2,15 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
+    let btnVolver = document.getElementById("btn-volver");
+    if (btnVolver) {
+        btnVolver.addEventListener("click", function(event) {
+            event.preventDefault();
+            history.back();
+        });
+    }
+    
+
     document.querySelectorAll('.eliminar-cancion').forEach(function(button) {
         button.addEventListener('click', function(event) {
             event.preventDefault();
