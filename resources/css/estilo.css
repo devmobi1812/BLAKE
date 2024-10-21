@@ -122,7 +122,8 @@ main>.contenedor{
     /*border-radius: 0.25rem;*/
     border-radius: 1rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    margin-top: 16px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .btn-primary {
@@ -183,7 +184,9 @@ main>.contenedor{
 }
 
 .btn-volver{
-    margin-top:1rem;
+    display: flex;
+    width:max-content;
+    margin-top:2rem;
     text-decoration: none;
     background-color:#0c9a9c;
     color: white;
