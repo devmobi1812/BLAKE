@@ -1,11 +1,11 @@
-{include file='head.tpl'}  
-{include file='header.tpl'}   
+{include file='shared/head.tpl'}  
+{include file='shared/header.tpl'}   
     
     <div class="contenedor">
       <div class="encabezado">
         <h1>Canciones</h1>
         {if {$esAdmin}}
-        <a class="btn btn-primary" href="cancion/crear"><i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i> Crear Canción</a>
+        <a class="btn btn-primary" href="cancion/crear"><i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i> Crear canción</a>
         {/if}
       </div>
           <table class="table-dark">
@@ -41,4 +41,4 @@
     </div>
           
           
-{include file='footer.tpl'}
+{include file='shared/footer.tpl'}

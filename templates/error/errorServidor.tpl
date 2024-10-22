@@ -1,4 +1,4 @@
-{include file='head.tpl'}
+{include file='shared/head.tpl'}
 <body>
     <div class="error">
         <h1 >Error {$numero}</h1>

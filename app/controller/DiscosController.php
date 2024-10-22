@@ -77,7 +77,7 @@ require_once("app/controller/UsuariosController.php");
                 $this->modelo->insertarDisco($disco);
                 header('Location: '.BASE_URL."discos");
             }else{
-                // DEBO MOSTRAR EL ERROR DE QUE HAY UN CAMPO VACIO
+                $this->vista->crearDisco("Complete todos los campos requeridos para crear el disco.");
             }
             
     
@@ -118,7 +118,7 @@ require_once("app/controller/UsuariosController.php");
                 header('Location: '.BASE_URL."discos");
             }else{
                 $disco = $this->modelo->getDisco($id);
-                $this->vista->editarDisco($disco, );
+                $this->vista->editarDisco($disco, "Complete todos los campos requeridos para actualizar el disco.");
             }
         }
 

@@ -13,14 +13,14 @@
             $titulo = "Acceder";
             $this->smarty->assign('titulo', $titulo);
             $this->smarty->assign('error', $error);
-            $this->smarty->display('templates/login.tpl');
+            $this->smarty->display('templates/auth/login.tpl');
         }
 
         function registrar($error = ""){
             $titulo="Registrar";
             $this->smarty->assign('titulo', $titulo);
             $this->smarty->assign('error', $error);
-            $this->smarty->display('templates/registrar.tpl');
+            $this->smarty->display('templates/auth/registrar.tpl');
         }
 
         function errorServidor($error, $texto){
@@ -28,7 +28,7 @@
             $this->smarty->assign('titulo', $titulo);
             $this->smarty->assign('numero', $error);
             $this->smarty->assign('texto', $texto);
-            $this->smarty->display("templates/errorServidor.tpl");
+            $this->smarty->display("templates/error/errorServidor.tpl");
         }
     }
 ?>

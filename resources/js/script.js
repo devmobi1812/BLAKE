@@ -2,6 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
+    //  FUNCION PARA QUE FUNCIONE EL BOTON DE VOLVER
     let btnVolver = document.getElementById("btn-volver");
     if (btnVolver) {
         btnVolver.addEventListener("click", function(event) {
@@ -10,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
     
-
+    //  FUNCION QUE EJECUTA LA ELIMINACION DE UNA CANCION
     document.querySelectorAll('.eliminar-cancion').forEach(function(button) {
         button.addEventListener('click', function(event) {
             event.preventDefault();
@@ -18,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             confirmarEliminacion(event, 'cancion/eliminar/' + id);
         });
     });
-
+    //  FUNCION QUE EJECUTA LA ELIMINACION DE UN DISCO
     document.querySelectorAll('.eliminar-disco').forEach(function(button) {
         button.addEventListener('click', function(event) {
             event.preventDefault();
@@ -26,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
             confirmarEliminacion(event, 'disco/eliminar/' + id);
         });
     });
-
+    //  FUNCION QUE EJECUTA EL POP-UP DE ELIMINACION
     function confirmarEliminacion(event, url) {
         event.preventDefault();
         Swal.fire({

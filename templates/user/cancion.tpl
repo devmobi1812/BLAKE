@@ -1,9 +1,9 @@
-{include file='head.tpl'}  
-{include file='header.tpl'} 
+{include file='shared/head.tpl'}  
+{include file='shared/header.tpl'} 
 
     <div class="contenedor">
         <a class="btn-volver" href="" id="btn-volver">Volver</a>
-        <h1>Detalles de Canción</h1>
+        <h1>Detalles de canción</h1>
             <table class="table-dark">
                 <thead>
                 <tr>
@@ -39,4 +39,4 @@
             </table>
     </div>
 
-{include file='footer.tpl'}
+{include file='shared/footer.tpl'}

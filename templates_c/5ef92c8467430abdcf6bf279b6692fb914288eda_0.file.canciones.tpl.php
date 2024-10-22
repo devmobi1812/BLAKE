@@ -1,32 +1,32 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-10-22 01:38:49
-  from 'C:\xampp\htdocs\BLAKE\templates\canciones.tpl' */
+/* Smarty version 4.5.1, created on 2024-10-22 02:09:02
+  from 'C:\xampp\htdocs\BLAKE\templates\user\canciones.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_6716e609654fb4_21236743',
+  'unifunc' => 'content_6716ed1e274068_35822784',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '8db7cda038154191a74695d2da632d27fb0575c9' => 
+    '5ef92c8467430abdcf6bf279b6692fb914288eda' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\BLAKE\\templates\\canciones.tpl',
-      1 => 1729553430,
+      0 => 'C:\\xampp\\htdocs\\BLAKE\\templates\\user\\canciones.tpl',
+      1 => 1729555739,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:head.tpl' => 1,
-    'file:header.tpl' => 1,
-    'file:footer.tpl' => 1,
+    'file:shared/head.tpl' => 1,
+    'file:shared/header.tpl' => 1,
+    'file:shared/footer.tpl' => 1,
   ),
 ),false)) {
-function content_6716e609654fb4_21236743 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+function content_6716ed1e274068_35822784 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender('file:shared/head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>  
-<?php $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+<?php $_smarty_tpl->_subTemplateRender('file:shared/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>   
     
     <div class="contenedor">
@@ -89,6 +89,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </div>
           
           
-<?php $_smarty_tpl->_subTemplateRender('file:footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+<?php $_smarty_tpl->_subTemplateRender('file:shared/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 }
 }

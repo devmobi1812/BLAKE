@@ -74,7 +74,7 @@ class CancionesController{
             header('Location: '.BASE_URL);
         }else{
             $opciones = $this->modelo->getOpciones();
-            $this->vista->crearCancion($opciones, "Complete todos los campos requeridos.");
+            $this->vista->crearCancion($opciones, "Complete todos los campos requeridos para guardar la canción.");
         }
         
 
@@ -114,7 +114,7 @@ class CancionesController{
         }else{
             $cancion = $this->modelo->getCancion($id);
             $opciones = $this->modelo->getOpciones();
-            $this->vista->editarCancion($cancion, $opciones, "Complete todos los campos requeridos.");
+            $this->vista->editarCancion($cancion, $opciones, "Complete todos los campos requeridos para actualizar la canción.");
         }
     }
 

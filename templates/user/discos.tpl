@@ -1,5 +1,5 @@
-{include file='head.tpl'}  
-{include file='header.tpl'} 
+{include file='shared/head.tpl'}  
+{include file='shared/header.tpl'} 
 <div class="contenedor">
     <div class="encabezado">
         <h1>Discos</h1>
@@ -29,4 +29,4 @@
     
 </div>
 
-{include file='footer.tpl'}
+{include file='shared/footer.tpl'}

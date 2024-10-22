@@ -1,8 +1,8 @@
-{include file='head.tpl'}  
-{include file='header.tpl'} 
+{include file='shared/head.tpl'}  
+{include file='shared/header.tpl'} 
 
 <div class="contenedor">
-    <h1>Crear Disco</h1>
+    <h1>Crear disco</h1>
     <form action="disco/guardar" method="post">
         <label for="">Nombre *</label>
         <input type="text" name="nombre">
@@ -24,4 +24,4 @@
     
 
 
-{include file='footer.tpl'}
+{include file='shared/footer.tpl'}

@@ -1,7 +1,7 @@
-{include file='head.tpl'}  
-{include file='header.tpl'} 
+{include file='shared/head.tpl'}  
+{include file='shared/header.tpl'} 
     <div class="contenedor">
-        <h1>Editar Disco</h1>
+        <h1>Editar disco</h1>
         <form action="disco/actualizar" method="post">
             <input type="hidden" name="id" value="{$disco.id}">
             <label for="">Nombre *</label>
@@ -25,4 +25,4 @@
         </form>
     </div>
         
-{include file='footer.tpl'}
+{include file='shared/footer.tpl'}

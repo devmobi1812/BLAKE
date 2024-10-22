@@ -71,11 +71,11 @@
                     $this->validar();
 
                 }else{
-                    $this->vista->registrar("Las contraseñas no son iguales.");
+                    $this->vista->registrar("Las contraseñas no coinciden.");
                 }
                 
             }else{
-                $this->vista->registrar("Complete todos los campos requeridos.");
+                $this->vista->registrar("Complete todos los campos requeridos para registrarse.");
             }
         }
         
@@ -97,7 +97,7 @@
                     $this->vista->login("Los datos ingresados son incorrectos.");
                 }
             }else{
-                $this->vista->login("Complete todos los campos requeridos.");
+                $this->vista->login("Complete todos los campos requeridos para iniciar sesión.");
             }
         }
 
