@@ -1,32 +1,32 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-10-22 02:35:36
+/* Smarty version 4.5.1, created on 2024-10-24 19:22:32
   from 'C:\xampp\htdocs\BLAKE\templates\admin\editarCancion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_6716f3587bf1e0_29270523',
+  'unifunc' => 'content_671a82588fb6f1_58416874',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '50731e31215583f4c29a5490f8040c8779127523' => 
     array (
       0 => 'C:\\xampp\\htdocs\\BLAKE\\templates\\admin\\editarCancion.tpl',
-      1 => 1729557232,
+      1 => 1729790208,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:shared/head.tpl' => 1,
-    'file:shared/header.tpl' => 1,
-    'file:shared/footer.tpl' => 1,
+    'file:components/head.tpl' => 1,
+    'file:components/header.tpl' => 1,
+    'file:components/footer.tpl' => 1,
   ),
 ),false)) {
-function content_6716f3587bf1e0_29270523 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_subTemplateRender('file:shared/head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+function content_671a82588fb6f1_58416874 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender('file:components/head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>  
-<?php $_smarty_tpl->_subTemplateRender('file:shared/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+<?php $_smarty_tpl->_subTemplateRender('file:components/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?> 
     <div class="contenedor">
         <h1>Editar canción</h1>
@@ -74,6 +74,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <button class="btn btn-primary" type="submit">Guardar</button>
         </form>
     </div>
-<?php $_smarty_tpl->_subTemplateRender('file:shared/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+<?php $_smarty_tpl->_subTemplateRender('file:components/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 }
 }

@@ -1,13 +1,13 @@
-{include file='shared/head.tpl'}  
+{include file='components/head.tpl'}  
 <body>
     <main>
         <div id="login">
             <div class="login">
                 <a href="inicio"><img src="/blake/resources/img/header/logo-blake-2024-70x.png" alt=""></a>
                 <div class="contenedorFormulario">
-                    <h1>Iniciar sesión</h2>
+                    <h1 class="titulo">Iniciar sesión</h2>
                         <form method="POST" action="login/validar">
-                            <label for="">Nombre de usuario</label>
+                            <label for="">Usuario</label>
                             <input type="text" name="nombre">
                             <label for="">Contraseña</label>
                             <input type="password" name="password" id="">
@@ -22,4 +22,4 @@
     </main>
 </body>
 
-{include file='shared/footer.tpl'}
+{include file='components/footer.tpl'}

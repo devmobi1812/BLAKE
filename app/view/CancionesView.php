@@ -14,7 +14,7 @@
             $this->smarty->assign('estaLogueado', $estaLogueado);
             $this->smarty->assign('titulo', $titulo);
             $this->smarty->assign('canciones', $canciones);
-            $this->smarty->display('templates/user/canciones.tpl');
+            $this->smarty->display('templates/clients/canciones.tpl');
         }
 
         function mostrarCancion($cancion, $esAdmin, $estaLogueado){
@@ -23,7 +23,7 @@
             $this->smarty->assign('estaLogueado', $estaLogueado);
             $this->smarty->assign('titulo', $titulo);
             $this->smarty->assign('cancion', $cancion);
-            $this->smarty->display('templates/user/cancion.tpl');
+            $this->smarty->display('templates/clients/cancion.tpl');
         }
 
         function crearCancion($opciones, $error =""){

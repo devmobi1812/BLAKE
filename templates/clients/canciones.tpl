@@ -1,5 +1,5 @@
-{include file='shared/head.tpl'}  
-{include file='shared/header.tpl'}   
+{include file='components/head.tpl'}  
+{include file='components/header.tpl'}   
     
     <div class="contenedor">
       <div class="encabezado">
@@ -41,4 +41,4 @@
     </div>
           
           
-{include file='shared/footer.tpl'}
+{include file='components/footer.tpl'}

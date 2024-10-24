@@ -1,5 +1,5 @@
-{include file='shared/head.tpl'}  
-{include file='shared/header.tpl'} 
+{include file='components/head.tpl'}  
+{include file='components/header.tpl'} 
     <div class="contenedor">
         <h1>Editar canción</h1>
         <form action="cancion/actualizar" method="post">
@@ -31,4 +31,4 @@
             <button class="btn btn-primary" type="submit">Guardar</button>
         </form>
     </div>
-{include file='shared/footer.tpl'}
+{include file='components/footer.tpl'}
