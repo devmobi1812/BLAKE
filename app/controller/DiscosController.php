@@ -58,14 +58,14 @@ require_once("app/controller/UsuariosController.php");
     
         public function guardarDisco(){
             if(!empty($_POST['nombre']) && !empty($_POST['anio'])){
-                $nombre = $_POST['nombre'];
-                $anio = $_POST['anio'];
+                $nombre = htmlspecialchars($_POST['nombre'], ENT_QUOTES, 'UTF-8');
+                $anio = htmlspecialchars($_POST['anio'], ENT_QUOTES, 'UTF-8');
                 $imagen="";
                 if(empty($_POST['imagen'])){
                     //$imagen="https://i.scdn.co/image/ab67616d0000b273e73a74043b1b7f721627b8f4";
                     $imagen="/blake/resources/img/discogenerico.png";
                 }else{
-                    $imagen = $_POST['imagen'];
+                    $imagen = htmlspecialchars($_POST['imagen'], ENT_QUOTES, 'UTF-8');
                 }
                 
         
@@ -96,16 +96,15 @@ require_once("app/controller/UsuariosController.php");
         }
         public function actualizarDisco(){
             $id=$_POST['id'];
-            $usuariosController = new UsuariosController();
             if(!empty($_POST['nombre']) && !empty($_POST['anio'])){
-                $nombre = $_POST['nombre'];
-                $anio = $_POST['anio'];
+                $nombre = htmlspecialchars($_POST['nombre'], ENT_QUOTES, 'UTF-8');
+                $anio = htmlspecialchars($_POST['anio'], ENT_QUOTES, 'UTF-8');
                 $imagen="";
                 if(empty($_POST['imagen'])){
                     //$imagen="https://i.scdn.co/image/ab67616d0000b273e73a74043b1b7f721627b8f4";
                     $imagen="/blake/resources/img/discogenerico.png";
                 }else{
-                    $imagen = $_POST['imagen'];
+                    $imagen = htmlspecialchars($_POST['imagen'], ENT_QUOTES, 'UTF-8');
                 }
 
                 $disco = new stdClass();

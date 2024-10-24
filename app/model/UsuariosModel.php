@@ -13,8 +13,7 @@
                 return $usuarios;
             }catch (PDOException $e){
                 $conexion->rollback();
-                error_log($e->getMessage());
-
+                //error_log($e->getMessage());
             }
         }
         function getUsuario($nombre){
@@ -38,14 +37,14 @@
             try{
                 $conexion=$this->getConexion();
                 $conexion->beginTransaction();
-                    $query= $conexion->prepare('INSERT INTO usuario(id, nombre, password, email, rol) VALUES (NULL, ?,?,?,?)');
+                    $query= $conexion->prepare('INSERT INTO usuario(id,nombre, password, email, rol) VALUES (NULL, ?,?,?,?)');
                     $query->execute([$usuario->nombre, $usuario->password, $usuario->email,$usuario->rol]);
                     
                 $conexion->commit();
             }catch (PDOException $e){
                 $conexion->rollback();
                 error_log($e->getMessage());
-                print($e->getMessage());
+                //print($e->getMessage());
             }
         }
 
