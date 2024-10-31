@@ -77,7 +77,6 @@ class CancionesModel extends ConexionModel{
         }catch(PDOException $e){
             $conexion->rollback();
             error_log($e->getMessage());
-            print($e);
         }
     }
 
@@ -91,7 +90,6 @@ class CancionesModel extends ConexionModel{
         }catch(PDOException $e){
             $conexion->rollback();
             error_log($e->getMessage());
-            print($e);
         }
     }
 
@@ -105,7 +103,6 @@ class CancionesModel extends ConexionModel{
         }catch(PDOException $e){
             $conexion->rollback();
             error_log($e->getMessage());
-            print($e);
         }
     }
 

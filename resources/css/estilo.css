@@ -315,7 +315,7 @@ select {
     text-align: center;
     margin-bottom: 2rem;
 }
-@media screen and (min-width: 660px) {
+@media screen and (min-width: 812px) {
         
     body{ 
         display: grid;
