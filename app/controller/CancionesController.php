@@ -57,7 +57,6 @@ class CancionesController{
 
     public function guardarCancion(){
         if(!empty($_POST['nombre']) && !empty($_POST['disco']) && !empty($_POST['duracion']) && !empty($_POST['link'])){
-            //$nombre = htmlspecialchars($_POST['nombre'], ENT_QUOTES, 'UTF-8');
             
             $nombre = htmlspecialchars($_POST['nombre'], ENT_QUOTES, 'UTF-8');
             $disco = htmlspecialchars($_POST['disco'], ENT_QUOTES, 'UTF-8');
