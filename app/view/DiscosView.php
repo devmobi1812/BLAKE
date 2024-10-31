@@ -15,7 +15,7 @@
             $this->smarty->assign('estaLogueado', $estaLogueado);
             $this->smarty->assign('titulo', $titulo);
             $this->smarty->assign('discos', $discos);
-            $this->smarty->display('templates/clients/discos.tpl');
+            $this->smarty->display('templates/discos/discos.tpl');
         }
 
         function mostrarDisco($disco, $esAdmin, $estaLogueado){// 
@@ -24,14 +24,14 @@
             $this->smarty->assign('estaLogueado', $estaLogueado);
             $this->smarty->assign('titulo', $titulo);
             $this->smarty->assign('discos', $disco);
-            $this->smarty->display('templates/clients/disco.tpl');
+            $this->smarty->display('templates/discos/disco.tpl');
         }
 
         function crearDisco($error=""){
             $titulo = "Crear Disco";
             $this->smarty->assign('error', $error);
             $this->smarty->assign('titulo', $titulo);
-            $this->smarty->display('templates/admin/crearDisco.tpl');
+            $this->smarty->display('templates/discos/crear.tpl');
         }
 
         function editarDisco($disco, $error=""){
@@ -39,7 +39,7 @@
             $this->smarty->assign('error', $error);
             $this->smarty->assign('titulo', $titulo);
             $this->smarty->assign('disco', $disco);
-            $this->smarty->display('templates/admin/editarDisco.tpl');
+            $this->smarty->display('templates/discos/editar.tpl');
         }
     }
 ?>

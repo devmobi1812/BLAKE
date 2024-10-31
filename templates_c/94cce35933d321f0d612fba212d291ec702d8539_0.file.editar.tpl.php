@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 4.5.1, created on 2024-10-24 21:52:39
-  from 'C:\xampp\htdocs\BLAKE\templates\admin\editarDisco.tpl' */
+/* Smarty version 4.5.1, created on 2024-10-31 03:17:42
+  from 'C:\xampp\htdocs\BLAKE\templates\discos\editar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.1',
-  'unifunc' => 'content_671aa587490e47_45934162',
+  'unifunc' => 'content_6722e8c6448c86_98532685',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'c0c80af4d1b572bf57a2cbbf0d7b358bd1700ec8' => 
+    '94cce35933d321f0d612fba212d291ec702d8539' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\BLAKE\\templates\\admin\\editarDisco.tpl',
+      0 => 'C:\\xampp\\htdocs\\BLAKE\\templates\\discos\\editar.tpl',
       1 => 1729790212,
       2 => 'file',
     ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:components/footer.tpl' => 1,
   ),
 ),false)) {
-function content_671aa587490e47_45934162 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6722e8c6448c86_98532685 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:components/head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>  
 <?php $_smarty_tpl->_subTemplateRender('file:components/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);

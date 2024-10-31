@@ -23,12 +23,12 @@
             $this->smarty->display('templates/auth/registrar.tpl');
         }
 
-        function errorServidor($error, $texto){
+        function error($error, $texto){
             $titulo="Error";
             $this->smarty->assign('titulo', $titulo);
             $this->smarty->assign('numero', $error);
             $this->smarty->assign('texto', $texto);
-            $this->smarty->display("templates/error/errorServidor.tpl");
+            $this->smarty->display("templates/error/general.tpl");
         }
     }
 ?>

@@ -38,7 +38,7 @@
                 $texto="La pagina solicitada no existe.";
             }
             
-            $this->vista->errorServidor($numero, $texto);
+            $this->vista->error($numero, $texto);
         }
 
         function registrar(){
