@@ -31,7 +31,6 @@ class ConexionModel{
         $tables = $query->fetchAll();
         if(count($tables) == 0) {
             $sql =<<<END
-        
             SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
             START TRANSACTION;
             SET time_zone = "+00:00";
