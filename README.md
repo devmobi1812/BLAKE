@@ -1,6 +1,6 @@
-# Deploy y Prueba de la Página Web
+# Deploy y prueba de la Página Web
 
-Este proyecto está diseñado para ejecutarse en un servidor local con soporte para PHP y MySQL. A continuación, se detallan los pasos para configurar y ejecutar el proyecto utilizando XAMPP en un entorno Windows.
+Este proyecto está diseñado para ejecutarse en un servidor con soporte para PHP y MySQL. A continuación, se detallan los pasos para configurar y ejecutar el proyecto utilizando XAMPP en un entorno Windows.
 
 ---
 
