@@ -1,5 +1,5 @@
 <?php
-
+require_once('config/config.php');
 class ConexionModel{
 
     private $db;
@@ -9,9 +9,7 @@ class ConexionModel{
     }
     private function crearConexion(){
         try{
-            $this->db = new PDO('mysql:host=localhost;port=3306;dbname=blake',
-            'root',
-            '');
+            $this->db = new PDO("mysql:host=".MYSQL_HOST .";dbname=".MYSQL_DB.";charset=utf8", MYSQL_USER, MYSQL_PASS);
             $this->deploy();
         }catch(PDOException $e){
             $this->db->rollback();
