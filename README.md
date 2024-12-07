@@ -77,11 +77,4 @@ Para acceder al sitio con permisos de administrador, utiliza las siguientes cred
 
 ---
 
-## Notas Importantes
-
-- **Permisos de Carpeta**: Asegúrate de que el servidor tenga acceso de lectura/escritura a la carpeta del proyecto.
-- **Configuración Adicional**: Si el proyecto utiliza librerías externas, verifica que estén correctamente instaladas y configuradas.
-
----
-
 ¡Listo! Ahora puedes explorar y probar la página web. Si encuentras algún problema, revisa los registros de errores en tu servidor o contáctame.
